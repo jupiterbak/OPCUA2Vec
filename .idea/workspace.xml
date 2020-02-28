@@ -3,30 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Opcua-all.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-all.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Opcua-test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Opcua-train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-train.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Opcua-valid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-valid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_discover_facts_ComplEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_discover_facts_ComplEx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_discover_facts_TransE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_discover_facts_TransE.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_gpu.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_gpu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_Train_ComplEx_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_ComplEx_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_Train_DistMult_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_DistMult_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_Train_HolE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_HolE_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_Train_TransE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_TransE_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_test_ComplEx_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_test_ComplEx_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_test_DistMult_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_test_DistMult_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_test_HolE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_test_HolE_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_test_TransE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_test_TransE_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_simple_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_simple_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_visualize_ComplEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_ComplEx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_visualize_ComplEx_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_ComplEx_3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_visualize_DistMult.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_DistMult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_visualize_HolE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_HolE.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_visualize_TransE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_TransE.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_visualize_TransE_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_TransE_3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
