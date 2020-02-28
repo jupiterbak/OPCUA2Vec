@@ -49,7 +49,7 @@ print("Hits@3: %.2f" % (hits_3))
 hits_1 = hits_at_n_score(ranks, n=1)
 print("Hits@1: %.2f" % (hits_1))
 
-save_model(model, model_name_path ='../export/opcua_TransE.pkl')
+save_model(model, model_name_path ='export/opcua_TransE.pkl')
 
 y_pred_after = model.predict(np.array([['ns=0;i=16572',	'ns=0;i=40', 'ns=0;i=68']]))
 print(y_pred_after)

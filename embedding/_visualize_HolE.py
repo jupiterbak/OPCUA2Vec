@@ -18,7 +18,7 @@ X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
 X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
 
 # Restore the model
-restored_model = restore_model(model_name_path='../export/opcua_HolE.pkl')
+restored_model = restore_model(model_name_path='export/opcua_HolE.pkl')
 
 # Get the teams entities and their corresponding embeddings
 triples_df = pd.DataFrame(X, columns=['s', 'p', 'o'])
