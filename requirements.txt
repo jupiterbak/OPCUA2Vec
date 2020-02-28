@@ -1,6 +1,8 @@
-numpy
-panda
-tensorflow=1.13.1
+tensorflow>=1.13.1,<2.0
+scikit-learn
 ampligraph
-plotly
+pandas
 matplotlib
+plotly
+seaborn
+mpld3
