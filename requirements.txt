@@ -3,6 +3,6 @@ scikit-learn
 ampligraph
 pandas
 matplotlib
-plotly
 seaborn
 mpld3
+plotly
