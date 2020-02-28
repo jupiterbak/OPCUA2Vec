@@ -23,7 +23,7 @@ model = ComplEx(batches_count=50,
                 optimizer_params={'lr':1e-4},
                 loss='multiclass_nll',
                 regularizer='LP',
-                regularizer_params={'p':3, 'lambda':1e-5},
+                regularizer_params={'p': 3, 'lambda':1e-5},
                 seed=555,
                 verbose=True)
 
