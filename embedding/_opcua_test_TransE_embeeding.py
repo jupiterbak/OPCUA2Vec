@@ -1,10 +1,10 @@
 import numpy as np
 
-from ampligraph.latent_features import ComplEx
+from ampligraph.latent_features import ComplEx, TransE
 from ampligraph.utils import restore_model
 
 # ComplEx model
-model = ComplEx(batches_count=50,
+model = TransE(batches_count=50,
                 epochs=20,
                 k=100,
                 eta=20,
@@ -13,14 +13,15 @@ model = ComplEx(batches_count=50,
                 loss='multiclass_nll',
                 regularizer='LP',
                 regularizer_params={'p':3, 'lambda':1e-5},
-                seed=0,
+                seed=555,
                 verbose=True)
 
+
 # Restore the model
-restored_model = restore_model(model_name_path='export/opcua_ComplEx.pkl')
+restored_model = restore_model(model_name_path='../export/opcua_TransE.pkl')
 
 y_pred_after = restored_model.predict(np.array([['ns=0;i=16572',	'ns=0;i=40', 'ns=0;i=68']]))
-print('Embedding of [\'ns=0;i=16572\',	\'ns=0;i=40\', \'ns=0;i=68\'] is {}'.format(y_pred_after))
+print('embedding of [\'ns=0;i=16572\',	\'ns=0;i=40\', \'ns=0;i=68\'] is {}'.format(y_pred_after))
 
 embs = restored_model.get_embeddings(['ns=0;i=16572'], embedding_type='entity')
 print(embs)

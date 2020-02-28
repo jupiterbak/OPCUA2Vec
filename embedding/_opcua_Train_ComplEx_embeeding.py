@@ -3,28 +3,28 @@ import pandas as pd
 import requests
 
 from ampligraph.datasets import load_from_csv
-from ampligraph.latent_features import ComplEx, TransE
+from ampligraph.latent_features import ComplEx
 from ampligraph.evaluation import evaluate_performance
 from ampligraph.evaluation import mr_score, mrr_score, hits_at_n_score
 from ampligraph.evaluation import train_test_split_no_unseen
 from ampligraph.utils import save_model
 
-X = load_from_csv('.', 'Opcua-all.txt', sep='\t')
+X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
 
 # Train test split
 X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
 
 # ComplEx model
-model = TransE(batches_count=50,
-                epochs=200,
+model = ComplEx(batches_count=50,
+                epochs=300,
                 k=100,
                 eta=20,
                 optimizer='adam',
                 optimizer_params={'lr':1e-4},
                 loss='multiclass_nll',
                 regularizer='LP',
-                regularizer_params={'p':3, 'lambda':1e-5},
-                seed=0,
+                regularizer_params={'p': 3, 'lambda':1e-5},
+                seed=555,
                 verbose=True)
 
 model.fit(X_train)
@@ -49,7 +49,7 @@ print("Hits@3: %.2f" % (hits_3))
 hits_1 = hits_at_n_score(ranks, n=1)
 print("Hits@1: %.2f" % (hits_1))
 
-save_model(model, model_name_path = 'export/opcua_TransE.pkl')
+save_model(model, model_name_path ='../export/opcua_ComplEx.pkl')
 
 y_pred_after = model.predict(np.array([['ns=0;i=16572',	'ns=0;i=40', 'ns=0;i=68']]))
 print(y_pred_after)

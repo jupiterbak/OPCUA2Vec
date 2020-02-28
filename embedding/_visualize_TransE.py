@@ -12,13 +12,13 @@ import mpld3
 import plotly.graph_objects as go
 import plotly.express as px
 
-X = load_from_csv('.', 'Opcua-all.txt', sep='\t')
+X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
 
 # Train test split
 X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
 
 # Restore the model
-restored_model = restore_model(model_name_path='export/opcua_ComplEx.pkl')
+restored_model = restore_model(model_name_path='../export/opcua_TransE.pkl')
 
 # Get the teams entities and their corresponding embeddings
 triples_df = pd.DataFrame(X, columns=['s', 'p', 'o'])
@@ -53,7 +53,7 @@ def plot_clusters(hue):
                      color="clusters"
                      )
     fig.update_layout(
-        title="ComplEx",
+        title="TransE",
     )
     fig.show()
     # fig = plt.figure(figsize=(12, 12))

@@ -11,13 +11,13 @@ import mpld3
 import plotly.graph_objects as go
 import plotly.express as px
 
-X = load_from_csv('.', 'Opcua-all.txt', sep='\t')
+X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
 
 # Train test split
 X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
 
 # Restore the model
-restored_model = restore_model(model_name_path='export/opcua_ComplEx.pkl')
+restored_model = restore_model(model_name_path='../export/opcua_ComplEx.pkl')
 
 # find top N cadidates for root element
 top_n = query_topn(restored_model, top_n=30, head='ns=0;i=2299', relation='ns=0;i=45', tail=None,

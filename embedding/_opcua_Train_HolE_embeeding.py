@@ -9,7 +9,7 @@ from ampligraph.evaluation import mr_score, mrr_score, hits_at_n_score
 from ampligraph.evaluation import train_test_split_no_unseen
 from ampligraph.utils import save_model
 
-X = load_from_csv('.', 'Opcua-all.txt', sep='\t')
+X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
 
 # Train test split
 X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
@@ -49,7 +49,7 @@ print("Hits@3: %.2f" % (hits_3))
 hits_1 = hits_at_n_score(ranks, n=1)
 print("Hits@1: %.2f" % (hits_1))
 
-save_model(model, model_name_path = 'export/opcua_HolE.pkl')
+save_model(model, model_name_path ='../export/opcua_HolE.pkl')
 
 y_pred_after = model.predict(np.array([['ns=0;i=16572',	'ns=0;i=40', 'ns=0;i=68']]))
 print(y_pred_after)

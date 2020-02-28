@@ -2,11 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OPCUA-Konowledge-Graph-ReasonningV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OPCUA-Konowledge-Graph-ReasonningV2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_Train_ComplEx_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/_opcua_Train_ComplEx_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Opcua-all.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-all.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Opcua-test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Opcua-train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-train.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Opcua-valid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-valid.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_discover_facts_ComplEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_discover_facts_ComplEx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_discover_facts_TransE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_discover_facts_TransE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_gpu.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_gpu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_opcua_Train_ComplEx_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_ComplEx_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_opcua_Train_DistMult_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_DistMult_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_opcua_Train_HolE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_HolE_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_opcua_Train_TransE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_TransE_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_opcua_test_ComplEx_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_test_ComplEx_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_opcua_test_DistMult_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_test_DistMult_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_opcua_test_HolE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_test_HolE_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_opcua_test_TransE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_test_TransE_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_simple_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_simple_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_visualize_ComplEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_ComplEx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_visualize_ComplEx_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_ComplEx_3D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_visualize_DistMult.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_DistMult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_visualize_HolE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_HolE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_visualize_TransE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_TransE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_visualize_TransE_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_TransE_3D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +39,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>\t</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,6 +54,10 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\data" />
+      <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2" />
     </key>
@@ -56,7 +75,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_discover_facts_TransE.py" />
+      <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_discover_facts_TransE.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -77,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_opcua_Train_DistMult_embeeding.py" />
+      <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_opcua_Train_DistMult_embeeding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -98,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_opcua_Train_HolE_embeeding.py" />
+      <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_opcua_Train_HolE_embeeding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,7 +138,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_visualize_DistMult.py" />
+      <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_visualize_DistMult.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,7 +159,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_visualize_HolE.py" />
+      <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_visualize_HolE.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,34 +209,53 @@
     </history-entry>
   </component>
   <component name="WindowStateProjectService">
+    <state x="640" y="315" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582877981231">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="640" y="315" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582877981231" />
     <state x="739" y="354" key="FileChooserDialogImpl" timestamp="1581072078552">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="739" y="354" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1581072078552" />
+    <state width="1899" height="253" key="GridCell.Tab.0.bottom" timestamp="1582884498805">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="253" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582884498805" />
+    <state width="1899" height="253" key="GridCell.Tab.0.center" timestamp="1582884498804">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="253" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582884498804" />
+    <state width="1899" height="253" key="GridCell.Tab.0.left" timestamp="1582884498804">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="253" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582884498804" />
+    <state width="1899" height="253" key="GridCell.Tab.0.right" timestamp="1582884498805">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="253" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582884498805" />
     <state x="461" y="222" key="SettingsEditor" timestamp="1581072095175">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="461" y="222" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1581072095175" />
-    <state x="655" y="403" key="com.intellij.ide.util.TipDialog" timestamp="1581072874009">
+    <state x="655" y="403" key="com.intellij.ide.util.TipDialog" timestamp="1582882526549">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="655" y="403" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1581072874009" />
+    <state x="655" y="403" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582882526549" />
+    <state x="657" y="185" width="736" height="789" key="find.popup" timestamp="1582884770938">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="657" y="185" width="736" height="789" key="find.popup/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582884770938" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/_opcua_test_ComplEx_embeeding.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/_visualize_ComplEx.py</url>
+          <url>file://$PROJECT_DIR$/embedding/_visualize_ComplEx.py</url>
           <line>55</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/_visualize_DistMult.py</url>
+          <url>file://$PROJECT_DIR$/embedding/_visualize_DistMult.py</url>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
