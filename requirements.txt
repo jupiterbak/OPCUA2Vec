@@ -6,3 +6,5 @@ matplotlib
 seaborn
 mpld3
 plotly
+gym
+ray[rllib]
