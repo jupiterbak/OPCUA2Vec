@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/reinforcement_learning/_rlib_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gym_environment/ReasoningEnv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gym_environment/_train_RL.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gym_environment/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/OPCUA-Konowledge-Graph-ReasonningV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OPCUA-Konowledge-Graph-ReasonningV2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Opcua-Demonstrator-all.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-Demonstrator-all.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Opcua-Demonstrator-test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-Demonstrator-test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Opcua-Demonstrator-train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-Demonstrator-train.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Opcua-Demonstrator-valid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Opcua-Demonstrator-valid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_opcua_Train_TransE_embeeding_Demonstrator.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_Train_TransE_embeeding_Demonstrator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/embedding/_visualize_HolE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_HolE.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,19 +40,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/embedding" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\data" />
       <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding" />
+      <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python._discover_facts_TransE">
+  <component name="RunManager" selected="Python._train_RL">
     <configuration name="_discover_facts_TransE" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,7 +75,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="_opcua_Train_DistMult_embeeding" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="_train_RL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,32 +83,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gym_environment" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_opcua_Train_DistMult_embeeding.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="_opcua_Train_HolE_embeeding" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_opcua_Train_HolE_embeeding.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym_environment/_train_RL.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,13 +138,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="_visualize_TransE_TSNE" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python._discover_facts_TransE" />
+      <item itemvalue="Python._visualize_DistMult" />
+      <item itemvalue="Python._visualize_HolE" />
+      <item itemvalue="Python._visualize_TransE_TSNE" />
+      <item itemvalue="Python._train_RL" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python._train_RL" />
+        <item itemvalue="Python._visualize_TransE_TSNE" />
+        <item itemvalue="Python._visualize_HolE" />
         <item itemvalue="Python._discover_facts_TransE" />
         <item itemvalue="Python._visualize_DistMult" />
-        <item itemvalue="Python._visualize_HolE" />
-        <item itemvalue="Python._opcua_Train_HolE_embeeding" />
-        <item itemvalue="Python._opcua_Train_DistMult_embeeding" />
       </list>
     </recent_temporary>
   </component>
@@ -195,10 +202,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582911085766">
+    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583232020186">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582911085766" />
+    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583232020186" />
     <state x="788" y="422" key="#com.intellij.ide.actions.DebugLogConfigureAction" timestamp="1582910818592">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -211,34 +218,34 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="739" y="354" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1581072078552" />
-    <state width="1898" height="192" key="GridCell.Tab.0.bottom" timestamp="1583049902256">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="227" key="GridCell.Tab.0.bottom" timestamp="1583250241606">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1899" height="455" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582911930656" />
+    <state width="1899" height="227" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583250241606" />
     <state width="1898" height="192" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583049902256" />
-    <state width="1898" height="192" key="GridCell.Tab.0.center" timestamp="1583049902255">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="227" key="GridCell.Tab.0.center" timestamp="1583250241605">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1899" height="455" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582911930656" />
+    <state width="1899" height="227" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583250241605" />
     <state width="1898" height="192" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583049902255" />
-    <state width="1898" height="192" key="GridCell.Tab.0.left" timestamp="1583049902255">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="227" key="GridCell.Tab.0.left" timestamp="1583250241605">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1899" height="455" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582911930655" />
+    <state width="1899" height="227" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583250241605" />
     <state width="1898" height="192" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583049902255" />
-    <state width="1898" height="192" key="GridCell.Tab.0.right" timestamp="1583049902255">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="227" key="GridCell.Tab.0.right" timestamp="1583250241606">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1899" height="455" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582911930656" />
+    <state width="1899" height="227" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583250241606" />
     <state width="1898" height="192" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583049902255" />
     <state x="590" y="432" width="728" height="443" key="Performance.Activity.Monitor" timestamp="1582910987996">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="590" y="432" width="728" height="443" key="Performance.Activity.Monitor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582910987996" />
-    <state x="535" y="197" key="SettingsEditor" timestamp="1583050231694">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="535" y="220" key="SettingsEditor" timestamp="1583219800608">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="535" y="220" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582911768421" />
+    <state x="535" y="220" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583219800608" />
     <state x="535" y="197" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583050231694" />
     <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1583012594704">
       <screen x="0" y="0" width="1920" height="1040" />
