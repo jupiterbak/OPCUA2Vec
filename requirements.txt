@@ -7,3 +7,4 @@ seaborn
 mpld3
 plotly
 gym
+stable-baselines

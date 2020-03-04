@@ -85,7 +85,8 @@ class ReasoningEnv(gym.Env):
         self.current_observation = np.concatenate((self.current_node_embeddings, self.query_subject_embeddings,
                                                    self.query_relation_embeddings), axis=None)
         # Compute the reward
-        self.last_reward = 1.0 if self.current_node == self.query_object else _score
+        # self.last_reward = 1.0 if self.current_node == self.query_object else _score
+        self.last_reward = 1.0 if self.current_node == self.query_object else 0.0
 
         # Compute Done
         self.done = self.current_node == (self.current_node == self.query_object) or (self.step_number % self.max_step == 0)
