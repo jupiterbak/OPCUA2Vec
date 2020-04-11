@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1.13.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/ppo_ReasoningEnv_transE/PPO2_1/events.out.tfevents.1583333209.MD1QSEHC" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/ppo_ReasoningEnv_transE/PPO2_MlpPolicy_1/events.out.tfevents.1586646393.LAPLACE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OPCUA-Konowledge-Graph-ReasonningV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OPCUA-Konowledge-Graph-ReasonningV2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/export/ppo2_MlpLstmPolicy_transE.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gym_environment/ReasoningEnv.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_environment/ReasoningEnv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym_environment/_train_RL.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_environment/_train_RL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym_environment/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reinforcement_learning/_train_RL.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforcement_learning/_train_RL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/ppo_ReasoningEnv_transE/PPO2_1/events.out.tfevents.1583355333.LAPLACE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/ppo_ReasoningEnv_transE/PPO2_MlpPolicy_1/events.out.tfevents.1583360162.LAPLACE" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +76,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="_train_RL" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="_train_RL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,28 +88,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym_environment/_train_RL.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="_visualize_DistMult" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_visualize_DistMult.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reinforcement_learning/_train_RL.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -128,6 +110,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding\_visualize_HolE.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="_visualize_TransE" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_visualize_TransE.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,18 +162,18 @@
     </configuration>
     <list>
       <item itemvalue="Python._discover_facts_TransE" />
-      <item itemvalue="Python._visualize_DistMult" />
       <item itemvalue="Python._visualize_HolE" />
       <item itemvalue="Python._visualize_TransE_TSNE" />
+      <item itemvalue="Python._visualize_TransE" />
       <item itemvalue="Python._train_RL" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python._train_RL" />
+        <item itemvalue="Python._visualize_TransE" />
         <item itemvalue="Python._visualize_TransE_TSNE" />
         <item itemvalue="Python._visualize_HolE" />
         <item itemvalue="Python._discover_facts_TransE" />
-        <item itemvalue="Python._visualize_DistMult" />
       </list>
     </recent_temporary>
   </component>
@@ -203,10 +206,11 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583318663273">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="405" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586645572964">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583318663273" />
+    <state x="405" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586645572964" />
     <state x="729" y="382" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583324266933">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -227,26 +231,26 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="739" y="354" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1581072078552" />
-    <state width="1899" height="629" key="GridCell.Tab.0.bottom" timestamp="1583333752424">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1898" height="443" key="GridCell.Tab.0.bottom" timestamp="1586646388263">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="629" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
-    <state width="1898" height="192" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583049902256" />
-    <state width="1899" height="629" key="GridCell.Tab.0.center" timestamp="1583333752424">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1898" height="443" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586646388263" />
+    <state width="1898" height="443" key="GridCell.Tab.0.center" timestamp="1586646388263">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="629" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
-    <state width="1898" height="192" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583049902255" />
-    <state width="1899" height="629" key="GridCell.Tab.0.left" timestamp="1583333752424">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1898" height="443" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586646388263" />
+    <state width="1898" height="443" key="GridCell.Tab.0.left" timestamp="1586646388263">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="629" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
-    <state width="1898" height="192" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583049902255" />
-    <state width="1899" height="629" key="GridCell.Tab.0.right" timestamp="1583333752424">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1898" height="443" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586646388263" />
+    <state width="1898" height="443" key="GridCell.Tab.0.right" timestamp="1586646388263">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="629" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
-    <state width="1898" height="192" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583049902255" />
+    <state width="1898" height="443" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586646388263" />
     <state width="1899" height="418" key="GridCell.Tab.1.bottom" timestamp="1583325097062">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -267,16 +271,16 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="590" y="432" width="728" height="443" key="Performance.Activity.Monitor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582910987996" />
-    <state x="535" y="220" key="SettingsEditor" timestamp="1583319158686">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="535" y="197" key="SettingsEditor" timestamp="1584612298310">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="535" y="220" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583319158686" />
-    <state x="535" y="197" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583050231694" />
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1583012594704">
+    <state x="535" y="197" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584612298310" />
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585035359735">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="403" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582910422293" />
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583012594704" />
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585035359735" />
     <state x="657" y="185" width="736" height="789" key="find.popup" timestamp="1582911490096">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -298,11 +302,6 @@
           <url>file://$PROJECT_DIR$/venv/Lib/site-packages/stable_baselines/common/vec_env/dummy_vec_env.py</url>
           <line>39</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gym_environment/ReasoningEnv.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gym_environment/_train_RL.py</url>
