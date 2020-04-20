@@ -5,8 +5,8 @@ from ampligraph.utils import restore_model
 
 # ComplEx model
 model = HolE(batches_count=50,
-                epochs=20,
-                k=100,
+                epochs=200,
+                k=20,
                 eta=20,
                 optimizer='adam',
                 optimizer_params={'lr':1e-4},

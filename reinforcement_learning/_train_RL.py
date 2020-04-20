@@ -21,12 +21,17 @@ env = ReasoningEnv( data_file_path='Opcua-all.txt', embedding_model_path='export
 # Optional: PPO2 requires a vectorized environment to run
 # the env is now wrapped automatically when passing it to the constructor
 # env = DummyVecEnv([lambda: env])
-model = PPO2(MlpPolicy, env, verbose=1, tensorboard_log="tmp/ppo_ReasoningEnv_transE/", nminibatches=1)
-model.learn(total_timesteps=100, tb_log_name='PPO2_MlpPolicy')
-model.save("export/ppo2_MlpLstmPolicy_transE")
+
+model = PPO2(MlpPolicy, env, verbose=1, tensorboard_log="tmp/ppo_ReasoningEnv_TransE/", nminibatches=1)
+model.learn(total_timesteps=1000, tb_log_name='PPO2_MlpPolicy')
+model.save("export/ppo2_MlpLstmPolicy_TransE")
+
+model = PPO2.load("export/ppo2_MlpLstmPolicy_TransE")
 
 obs = env.reset()
-for i in range(100):
+for i in range(300):
     action, _states = model.predict(obs)
     obs, rewards, dones, info = env.step(action)
     env.render()
+    if dones:
+        env.reset()

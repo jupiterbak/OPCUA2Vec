@@ -18,7 +18,7 @@ X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
 model = ComplEx(batches_count=50,
                 epochs=300,
                 k=100,
-                eta=20,
+                eta=100,
                 optimizer='adam',
                 optimizer_params={'lr':1e-4},
                 loss='multiclass_nll',

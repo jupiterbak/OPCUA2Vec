@@ -17,7 +17,7 @@ X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
 # ComplEx model
 model = DistMult(batches_count=50,
                 epochs=300,
-                k=100,
+                k=200,
                 eta=20,
                 optimizer='adam',
                 optimizer_params={'lr':1e-4},
