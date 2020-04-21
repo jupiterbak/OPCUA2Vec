@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tmp/ppo_ReasoningDeepPathEnv_TransE/PPO2_MlpPolicy_1/events.out.tfevents.1587408764.LAPLACE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conda-spec-file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/install.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pip-spec-file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/embedding/_opcua_autoTrain_TransE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_TransE_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/export/ppo2_MlpLstmPolicy_TransE_DeepPath.zip" beforeDir="false" afterPath="$PROJECT_DIR$/export/ppo2_MlpLstmPolicy_TransE_DeepPath.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reinforcement_learning/_train_RL.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforcement_learning/_train_RL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ppo_ReasoningDeepPathEnv_TransE/PPO2_MlpPolicy_1/events.out.tfevents.1587393061.LAPLACE" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,28 +298,28 @@
     </state>
     <state x="739" y="317" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587396960064" />
     <state x="739" y="354" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1581072078552" />
-    <state width="1898" height="509" key="GridCell.Tab.0.bottom" timestamp="1587421638853">
+    <state width="1898" height="97" key="GridCell.Tab.0.bottom" timestamp="1587464975805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="455" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587396114794" />
+    <state width="1898" height="97" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587464975805" />
     <state width="1899" height="629" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
     <state width="1898" height="509" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587421638853" />
-    <state width="1898" height="509" key="GridCell.Tab.0.center" timestamp="1587421638853">
+    <state width="1898" height="97" key="GridCell.Tab.0.center" timestamp="1587464975805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="455" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587396114794" />
+    <state width="1898" height="97" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587464975805" />
     <state width="1899" height="629" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
     <state width="1898" height="509" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587421638853" />
-    <state width="1898" height="509" key="GridCell.Tab.0.left" timestamp="1587421638852">
+    <state width="1898" height="97" key="GridCell.Tab.0.left" timestamp="1587464975805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="455" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587396114794" />
+    <state width="1898" height="97" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587464975805" />
     <state width="1899" height="629" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
     <state width="1898" height="509" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587421638852" />
-    <state width="1898" height="509" key="GridCell.Tab.0.right" timestamp="1587421638853">
+    <state width="1898" height="97" key="GridCell.Tab.0.right" timestamp="1587464975805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="455" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587396114794" />
+    <state width="1898" height="97" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587464975805" />
     <state width="1899" height="629" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
     <state width="1898" height="509" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587421638853" />
     <state width="1898" height="333" key="GridCell.Tab.1.bottom" timestamp="1587395927176">
@@ -351,9 +350,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="590" y="432" width="728" height="443" key="Performance.Activity.Monitor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582910987996" />
-    <state x="535" y="197" key="SettingsEditor" timestamp="1584612298310">
+    <state x="535" y="197" key="SettingsEditor" timestamp="1587467477916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="535" y="197" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587467477916" />
     <state x="535" y="220" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583319158686" />
     <state x="535" y="197" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584612298310" />
     <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1587408638711">

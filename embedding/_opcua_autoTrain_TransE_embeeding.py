@@ -24,7 +24,7 @@ param_grid = {
                  "seed": 0,
                  "epochs": [1000],
                  "k": [200, 50],
-                 "eta": [5,10],
+                 "eta": [5, 10],
                  "loss": ["pairwise", "nll", "self_adversarial"],
                  # We take care of mapping the params to corresponding classes
                  "loss_params": {
@@ -60,6 +60,8 @@ ranks_test, mrr_test = select_best_model_ranking(model_class, # Class handle of 
                                                  X_test,
                                                  # Parameter grid
                                                  param_grid,
+                                                 # Maximum Combination
+                                                 max_combinations=30,
                                                  # Use filtered set for eval
                                                  use_filter=True,
                                                  # corrupt subject and objects separately during eval
@@ -74,7 +76,7 @@ ranks = evaluate_performance(X_test,
                              model=best_model,
                              filter_triples=filter_triples,
                              use_default_protocol=True,
-                             verbose=True)
+                             verbose=False)
 
 mr = mr_score(ranks)
 mrr = mrr_score(ranks)
