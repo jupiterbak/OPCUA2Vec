@@ -23,7 +23,7 @@ env = ReasoningEnv( data_file_path='Opcua-all.txt', embedding_model_path='export
 # env = DummyVecEnv([lambda: env])
 
 model = PPO2(MlpPolicy, env, verbose=1, tensorboard_log="tmp/ppo_ReasoningEnv_TransE/", nminibatches=1)
-model.learn(total_timesteps=1000, tb_log_name='PPO2_MlpPolicy')
+model.learn(total_timesteps=20000, tb_log_name='PPO2_MlpPolicy')
 model.save("export/ppo2_MlpLstmPolicy_TransE")
 
 model = PPO2.load("export/ppo2_MlpLstmPolicy_TransE")

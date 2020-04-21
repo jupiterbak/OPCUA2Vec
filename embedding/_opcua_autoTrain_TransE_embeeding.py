@@ -22,7 +22,7 @@ model_class = TransE
 param_grid = {
                  "batches_count": [10],
                  "seed": 0,
-                 "epochs": [4000],
+                 "epochs": [1000],
                  "k": [200, 50],
                  "eta": [5,10],
                  "loss": ["pairwise", "nll", "self_adversarial"],
