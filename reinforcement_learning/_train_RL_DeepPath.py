@@ -19,7 +19,7 @@ DEVICE = "/gpu:0"  # /cpu:0 or /gpu:0
 
 # Number of environment to instantiate
 NUM_ENV = 1
-sess = tf.Session(config=tf.ConfigProto(allow_soft_placement=False, log_device_placement=False))
+# sess = tf.Session(config=tf.ConfigProto(allow_soft_placement=False, log_device_placement=False))
 
 env = None
 if NUM_ENV == 1:
