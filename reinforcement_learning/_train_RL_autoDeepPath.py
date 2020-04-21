@@ -25,7 +25,7 @@ env = ReasoningDeepPathEnv( data_file_path='Opcua-all.txt', embedding_model_path
 # env = DummyVecEnv([lambda: env])
 
 RL_model = PPO2(MlpPolicy, env, verbose=1, tensorboard_log="tmp/ppo_ReasoningDeepPathEnv_autoTransE/", nminibatches=1)
-RL_model.learn(total_timesteps=20000, tb_log_name='PPO2_MlpPolicy')
+RL_model.learn(total_timesteps=30000, tb_log_name='PPO2_MlpPolicy')
 RL_model.save("export/ppo2_MlpLstmPolicy_autoTransE_DeepPath")
 
 # test the model
