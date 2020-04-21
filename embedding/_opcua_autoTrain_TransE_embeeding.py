@@ -1,3 +1,5 @@
+from pprint import pprint
+
 import numpy as np
 import pandas as pd
 import requests
@@ -62,7 +64,7 @@ best_model, best_params, best_mrr_train, ranks_test, mrr_test, experimental_hist
                               # Parameter grid
                               param_grid,
                               # Maximum Combination
-                              max_combinations=2,
+                              # max_combinations=2,
                               # Use filtered set for eval
                               use_filter=True,
                               # corrupt subject and objects separately during eval
@@ -70,6 +72,7 @@ best_model, best_params, best_mrr_train, ranks_test, mrr_test, experimental_hist
                               # Log all the model hyperparams and evaluation stats
                               verbose=False)
 print(type(best_model).__name__, best_params, best_mrr_train, mrr_test)
+save_model(best_model, model_name_path='export/opcua_autoTransE.pkl')
 
 # Evaluate resulting Model
 filter_triples = np.concatenate((X_train, X_test))
@@ -91,8 +94,6 @@ hits_3 = hits_at_n_score(ranks, n=3)
 print("Hits@3: %.2f" % (hits_3))
 hits_1 = hits_at_n_score(ranks, n=1)
 print("Hits@1: %.2f" % (hits_1))
-
-save_model(best_model, model_name_path='export/opcua_autoTransE.pkl')
 
 y_pred_after = best_model.predict(np.array([['ns=0;i=16572', 'ns=0;i=40', 'ns=0;i=68']]))
 print(y_pred_after)
