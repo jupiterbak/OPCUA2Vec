@@ -20,52 +20,53 @@ model_class = ComplEx
 
 # Use the template given below for doing grid search.
 param_grid = {
-                 "batches_count": [10],
-                 "seed": 0,
-                 "epochs": [4000],
-                 "k": [200, 50],
-                 "eta": [5,10],
-                 "loss": ["pairwise", "nll", "self_adversarial"],
-                 # We take care of mapping the params to corresponding classes
-                 "loss_params": {
-                     #margin corresponding to both pairwise and adverserial loss
-                     "margin": [0.5, 20],
-                     #alpha corresponding to adverserial loss
-                     "alpha": [0.5]
-                 },
-                 "embedding_model_params": {
-                     # generate corruption using all entities during training
-                     "negative_corruption_entities":"all"
-                 },
-                 "regularizer": [None, "LP"],
-                 "regularizer_params": {
-                     "p": [2],
-                     "lambda": [1e-4, 1e-5]
-                 },
-                 "optimizer": ["adam"],
-                 "optimizer_params":{
-                     "lr": [0.01, 0.0001]
-                 },
-                 "verbose": True
-             }
+    "batches_count": [10],
+    "seed": 0,
+    "epochs": [4000],
+    "k": [200, 50],
+    "eta": [5, 10],
+    "loss": ["pairwise", "nll", "self_adversarial"],
+    # We take care of mapping the params to corresponding classes
+    "loss_params": {
+        # margin corresponding to both pairwise and adverserial loss
+        "margin": [0.5, 20],
+        # alpha corresponding to adverserial loss
+        "alpha": [0.5]
+    },
+    "embedding_model_params": {
+        # generate corruption using all entities during training
+        "negative_corruption_entities": "all"
+    },
+    "regularizer": [None, "LP"],
+    "regularizer_params": {
+        "p": [2],
+        "lambda": [1e-4, 1e-5]
+    },
+    "optimizer": ["adam"],
+    "optimizer_params": {
+        "lr": [0.01, 0.0001]
+    },
+    "verbose": True
+}
 
 # Train the model on all possibile combinations of hyperparameters.
 # Models are validated on the validation set.
 # It returnes a model re-trained on training and validation sets.
 best_model, best_params, best_mrr_train, \
-ranks_test, mrr_test = select_best_model_ranking(model_class, # Class handle of the model to be used
-                                                 # Dataset
-                                                 X_train,
-                                                 X_valid,
-                                                 X_test,
-                                                 # Parameter grid
-                                                 param_grid,
-                                                 # Use filtered set for eval
-                                                 use_filter=True,
-                                                 # corrupt subject and objects separately during eval
-                                                 use_default_protocol=True,
-                                                 # Log all the model hyperparams and evaluation stats
-                                                 verbose=True)
+ranks_test, mrr_test, experimental_history = select_best_model_ranking(model_class,
+                                                                       # Class handle of the model to be used
+                                                                       # Dataset
+                                                                       X_train,
+                                                                       X_valid,
+                                                                       X_test,
+                                                                       # Parameter grid
+                                                                       param_grid,
+                                                                       # Use filtered set for eval
+                                                                       use_filter=True,
+                                                                       # corrupt subject and objects separately during eval
+                                                                       use_default_protocol=True,
+                                                                       # Log all the model hyperparams and evaluation stats
+                                                                       verbose=True)
 print(type(best_model).__name__, best_params, best_mrr_train, mrr_test)
 
 # Evaluate resulting Model
@@ -89,9 +90,9 @@ print("Hits@3: %.2f" % (hits_3))
 hits_1 = hits_at_n_score(ranks, n=1)
 print("Hits@1: %.2f" % (hits_1))
 
-save_model(best_model, model_name_path ='export/opcua_autoComplEx.pkl')
+save_model(best_model, model_name_path='export/opcua_autoComplEx.pkl')
 
-y_pred_after = best_model.predict(np.array([['ns=0;i=16572',	'ns=0;i=40', 'ns=0;i=68']]))
+y_pred_after = best_model.predict(np.array([['ns=0;i=16572', 'ns=0;i=40', 'ns=0;i=68']]))
 print(y_pred_after)
 
 embs = best_model.get_embeddings(['ns=0;i=16572'], embedding_type='entity')
