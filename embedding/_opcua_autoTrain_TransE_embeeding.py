@@ -24,7 +24,7 @@ model_class = TransE
 param_grid = {
     "batches_count": [10],
     "seed": 0,
-    "epochs": [1000],
+    "epochs": [2000],
     "k": [200, 50],
     "eta": [5, 10],
     "loss": ["pairwise", "nll", "self_adversarial"],
@@ -64,7 +64,7 @@ best_model, best_params, best_mrr_train, ranks_test, mrr_test, experimental_hist
                               # Parameter grid
                               param_grid,
                               # Maximum Combination
-                              # max_combinations=2,
+                              max_combinations=150,
                               # Use filtered set for eval
                               use_filter=True,
                               # corrupt subject and objects separately during eval
