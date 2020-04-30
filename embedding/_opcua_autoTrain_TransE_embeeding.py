@@ -25,7 +25,7 @@ param_grid = {
     "batches_count": [10],
     "seed": 0,
     "epochs": [2000],
-    "k": [200, 50],
+    "k": [50, 200],
     "eta": [5, 10],
     "loss": ["pairwise", "nll", "self_adversarial"],
     # We take care of mapping the params to corresponding classes
@@ -64,13 +64,13 @@ best_model, best_params, best_mrr_train, ranks_test, mrr_test, experimental_hist
                               # Parameter grid
                               param_grid,
                               # Maximum Combination
-                              max_combinations=150,
+                              # max_combinations=150,
                               # Use filtered set for eval
                               use_filter=True,
                               # corrupt subject and objects separately during eval
                               use_default_protocol=True,
                               # Log all the model hyperparams and evaluation stats
-                              verbose=False)
+                              verbose=True)
 print(type(best_model).__name__, best_params, best_mrr_train, mrr_test)
 save_model(best_model, model_name_path='export/opcua_autoTransE.pkl')
 

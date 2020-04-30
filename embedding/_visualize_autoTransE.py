@@ -4,13 +4,14 @@ import pandas as pd
 import seaborn as sns
 from ampligraph.datasets import load_from_csv
 from ampligraph.discovery import find_clusters
-from ampligraph.evaluation import train_test_split_no_unseen
+from ampligraph.evaluation import train_test_split_no_unseen, evaluate_performance, mr_score, mrr_score, hits_at_n_score
 from ampligraph.utils import restore_model
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 import mpld3
 import plotly.graph_objects as go
 import plotly.express as px
+import json
 
 X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
 
@@ -19,7 +20,37 @@ X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
 
 # Restore the model
 restored_model = restore_model(model_name_path='export/opcua_autoTransE.pkl')
+print("########### Model Hyper-Parameters ##################")
+hyper_param_dict = restored_model.get_hyperparameter_dict()
+print(json.dumps(hyper_param_dict, indent=4))
+print("########### Model Embedding Parameters ##################")
+emb_model_params_dict = {}
+restored_model.get_embedding_model_params(emb_model_params_dict)
+print(json.dumps(emb_model_params_dict, indent=4))
 
+# Evaluate resulting Model
+print("########### Model Evaluation ##################")
+filter_triples = np.concatenate((X_train, X_test))
+ranks = evaluate_performance(X_test,
+                             model=restored_model,
+                             filter_triples=filter_triples,
+                             use_default_protocol=True,
+                             verbose=False)
+
+mr = mr_score(ranks)
+mrr = mrr_score(ranks)
+
+print("MRR: %.2f" % (mrr))
+print("MR: %.2f" % (mr))
+
+hits_10 = hits_at_n_score(ranks, n=10)
+print("Hits@10: %.2f" % (hits_10))
+hits_3 = hits_at_n_score(ranks, n=3)
+print("Hits@3: %.2f" % (hits_3))
+hits_1 = hits_at_n_score(ranks, n=1)
+print("Hits@1: %.2f" % (hits_1))
+
+print("########### Generate and plot the Cluster ##################")
 # Get the teams entities and their corresponding embeddings
 triples_df = pd.DataFrame(X, columns=['s', 'p', 'o'])
 uniques = triples_df.s.unique()
@@ -43,6 +74,7 @@ top20Node = ["ns=0;i=84", "ns=0;i=85", "ns=0;i=86", "ns=0;i=87", "ns=4;s=Demo", 
              "ns=0;i=2041", "ns=0;i=92", "ns=0;i=93", "ns=0;i=24"]
 
 np.random.seed(0)
+
 
 # Plot 2D embeddings with country labels
 def plot_clusters(hue):
@@ -74,5 +106,6 @@ def plot_clusters(hue):
     #         texts.append(plt.text(point['embedding1']+0.02,
     #                      point['embedding2']+0.01,
     #                      str(point["uniques"])))
-plot_clusters("plot")
 
+
+plot_clusters("plot")
