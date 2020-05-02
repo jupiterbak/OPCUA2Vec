@@ -25,11 +25,11 @@ env = None
 if NUM_ENV == 1:
     # Instantiate a single environment
     env = ReasoningDeepPathEnv(data_file_path='Opcua-all.txt', embedding_model_path='export/opcua_autoTransE.pkl',
-                               max_step=10)
+                               max_step=8)
 else:
     # multiprocess environment
     env_options = {'data_file_path': 'Opcua-all.txt', 'embedding_model_path': 'export/opcua_autoTransE.pkl',
-                   'max_step': 10}
+                   'max_step': 8}
     env = make_vec_env(ReasoningDeepPathEnv, n_envs=NUM_ENV, env_kwargs=env_options, )
 
 # Check the environment
@@ -41,17 +41,22 @@ else:
 # env = DummyVecEnv([lambda: env])
 with tf.device(DEVICE):
     RL_model = PPO2(
-        MlpPolicy,
+        MlpLstmPolicy,
         env,
+        policy_kwargs={'n_lstm': 16},
+        cliprange=0.2,
+        n_steps=128,
+        seed=998,
+        learning_rate=20e-4,
         verbose=1,
-        tensorboard_log="tmp/ppo_ReasoningDeepPathEnv_autoTransE/",
+        tensorboard_log="tmp/ppo_ReasoningDeepPathEnv_autoTransE_6/",
         nminibatches=1,
         n_cpu_tf_sess=4)
     RL_model.learn(total_timesteps=40000, tb_log_name='PPO2_MlpPolicy')
-    RL_model.save("export/ppo2_MlpPolicy_autoTransE_DeepPath")
+    RL_model.save("export/ppo2_MlpPolicy_autoTransE_DeepPath_6")
 
     # test the model
-    RL_model = PPO2.load("export/ppo2_MlpPolicy_autoTransE_DeepPath")
+    RL_model = PPO2.load("export/ppo2_MlpPolicy_autoTransE_DeepPath_6")
     obs = env.reset()
     for i in range(100):
         action, _states = RL_model.predict(obs)

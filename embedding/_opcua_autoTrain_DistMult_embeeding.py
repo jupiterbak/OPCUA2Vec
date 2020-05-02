@@ -1,3 +1,5 @@
+from pprint import pprint
+
 import numpy as np
 import pandas as pd
 import requests
@@ -7,7 +9,7 @@ from ampligraph.latent_features import ComplEx, TransE
 from ampligraph.evaluation import evaluate_performance, select_best_model_ranking
 from ampligraph.evaluation import mr_score, mrr_score, hits_at_n_score
 from ampligraph.evaluation import train_test_split_no_unseen
-from ampligraph.latent_features.models import DistMult
+from ampligraph.latent_features.models import HolE, DistMult
 from ampligraph.utils import save_model
 
 # Prepare the dataset
@@ -23,8 +25,8 @@ model_class = DistMult
 param_grid = {
     "batches_count": [10],
     "seed": 0,
-    "epochs": [4000],
-    "k": [200, 50],
+    "epochs": [2000],
+    "k": [50, 200],
     "eta": [5, 10],
     "loss": ["pairwise", "nll", "self_adversarial"],
     # We take care of mapping the params to corresponding classes
@@ -53,22 +55,25 @@ param_grid = {
 # Train the model on all possibile combinations of hyperparameters.
 # Models are validated on the validation set.
 # It returnes a model re-trained on training and validation sets.
-best_model, best_params, best_mrr_train, \
-ranks_test, mrr_test, experimental_history = select_best_model_ranking(model_class,
-                                                                       # Class handle of the model to be used
-                                                                       # Dataset
-                                                                       X_train,
-                                                                       X_valid,
-                                                                       X_test,
-                                                                       # Parameter grid
-                                                                       param_grid,
-                                                                       # Use filtered set for eval
-                                                                       use_filter=True,
-                                                                       # corrupt subject and objects separately during eval
-                                                                       use_default_protocol=True,
-                                                                       # Log all the model hyperparams and evaluation stats
-                                                                       verbose=True)
+best_model, best_params, best_mrr_train, ranks_test, mrr_test, experimental_history = \
+    select_best_model_ranking(model_class,
+                              # Class handle of the model to be used
+                              # Dataset
+                              X_train,
+                              X_valid,
+                              X_test,
+                              # Parameter grid
+                              param_grid,
+                              # Maximum Combination
+                              # max_combinations=150,
+                              # Use filtered set for eval
+                              use_filter=True,
+                              # corrupt subject and objects separately during eval
+                              use_default_protocol=True,
+                              # Log all the model hyperparams and evaluation stats
+                              verbose=True)
 print(type(best_model).__name__, best_params, best_mrr_train, mrr_test)
+save_model(best_model, model_name_path='export/opcua_autoDistMult.pkl')
 
 # Evaluate resulting Model
 filter_triples = np.concatenate((X_train, X_test))
@@ -76,7 +81,7 @@ ranks = evaluate_performance(X_test,
                              model=best_model,
                              filter_triples=filter_triples,
                              use_default_protocol=True,
-                             verbose=True)
+                             verbose=False)
 
 mr = mr_score(ranks)
 mrr = mrr_score(ranks)
@@ -90,8 +95,6 @@ hits_3 = hits_at_n_score(ranks, n=3)
 print("Hits@3: %.2f" % (hits_3))
 hits_1 = hits_at_n_score(ranks, n=1)
 print("Hits@1: %.2f" % (hits_1))
-
-save_model(best_model, model_name_path='export/opcua_autoDistMult.pkl')
 
 y_pred_after = best_model.predict(np.array([['ns=0;i=16572', 'ns=0;i=40', 'ns=0;i=68']]))
 print(y_pred_after)
