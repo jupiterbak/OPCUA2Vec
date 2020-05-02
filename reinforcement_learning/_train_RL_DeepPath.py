@@ -39,7 +39,11 @@ else:
 # the env is now wrapped automatically when passing it to the constructor
 # env = DummyVecEnv([lambda: env])
 with tf.device(DEVICE):
-    RL_model = PPO2(MlpPolicy, env, verbose=1, tensorboard_log="tmp/ppo_ReasoningDeepPathEnv_TransE/",
+    RL_model = PPO2(MlpLstmPolicy,
+                    env,
+                    policy_kwargs={'n_lstm': 8},
+                    verbose=1,
+                    tensorboard_log="tmp/ppo_ReasoningDeepPathEnv_TransE/",
                     nminibatches=1,
                     n_cpu_tf_sess=4)
     RL_model.learn(total_timesteps=40000, tb_log_name='PPO2_MlpPolicy')

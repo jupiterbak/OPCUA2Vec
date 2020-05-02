@@ -15,7 +15,7 @@ from gym_environment.ReasoningEnv import ReasoningEnv
 # Useful if you're training a model on the same
 # machine, in which case use CPU and leave the
 # GPU for training.
-DEVICE = "/cpu:0"  # /cpu:0 or /gpu:0
+DEVICE = "/gpu:0"  # /cpu:0 or /gpu:0
 
 # Number of environment to instantiate
 NUM_ENV = 1
@@ -40,14 +40,18 @@ else:
 # the env is now wrapped automatically when passing it to the constructor
 # env = DummyVecEnv([lambda: env])
 with tf.device(DEVICE):
-    RL_model = PPO2(MlpPolicy, env, verbose=1, tensorboard_log="tmp/ppo_ReasoningDeepPathEnv_autoTransE/",
-                    nminibatches=1,
-                    n_cpu_tf_sess=4)
+    RL_model = PPO2(
+        MlpPolicy,
+        env,
+        verbose=1,
+        tensorboard_log="tmp/ppo_ReasoningDeepPathEnv_autoTransE/",
+        nminibatches=1,
+        n_cpu_tf_sess=4)
     RL_model.learn(total_timesteps=40000, tb_log_name='PPO2_MlpPolicy')
-    RL_model.save("export/ppo2_MlpLstmPolicy_autoTransE_DeepPath")
+    RL_model.save("export/ppo2_MlpPolicy_autoTransE_DeepPath")
 
     # test the model
-    RL_model = PPO2.load("export/ppo2_MlpLstmPolicy_autoTransE_DeepPath")
+    RL_model = PPO2.load("export/ppo2_MlpPolicy_autoTransE_DeepPath")
     obs = env.reset()
     for i in range(100):
         action, _states = RL_model.predict(obs)

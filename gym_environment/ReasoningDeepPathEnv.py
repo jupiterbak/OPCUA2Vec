@@ -92,16 +92,17 @@ class ReasoningDeepPathEnv(gym.Env):
         self.done = (self.current_node.lower() == self.query_object.lower()) or (self.step_number % self.max_step == 0)
 
         # Compute the reward
-        global_reward = 0
         efficiency_reward = 1.0 / (len(self.path_history))
         if self.current_node.lower() == self.query_object.lower():
             global_reward = 1.0
-            self.last_reward = global_reward + efficiency_reward
             # self.last_reward = 1.0
-        elif self.done:
-            global_reward = -1.0
+            self.last_reward = global_reward + efficiency_reward
+        # elif (self.step_number % self.max_step) == 0:
+        #     global_reward = -1.0
+        #     self.last_reward = global_reward
         else:
             global_reward = 0.0
+            self.last_reward = global_reward
             # self.last_reward = (1/(1 + abs(_score)))
 
         # self.last_reward = 1.0 if self.current_node == self.query_object else 0.0

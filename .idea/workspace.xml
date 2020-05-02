@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/export/opcua_autoTransE - Kopie.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/opcua_autoTransE.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/ppo_ReasoningDeepPathEnv_TransE/PPO2_MlpPolicy_1/events.out.tfevents.1588255595.HAL9000" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/ppo_ReasoningDeepPathEnv_autoTransE/PPO2_MlpPolicy_1/events.out.tfevents.1588230331.HAL9000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/ppo_ReasoningDeepPathEnv_autoTransE/PPO2_MlpPolicy_1/events.out.tfevents.1588418004.LAPLACE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/embedding/_opcua_autoTrain_TransE_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_TransE_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/embedding/_visualize_autoTransE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_autoTransE.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/export/_opcua_autoTransE.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/export/opcua_autoTransE - Kopie.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/export/ppo2_MlpLstmPolicy_HolE.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/export/ppo2_MlpLstmPolicy_TransE.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/export/ppo2_MlpLstmPolicy_TransE_DeepPath.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym_environment/ReasoningDeepPathEnv.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_environment/ReasoningDeepPathEnv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reinforcement_learning/_train_RL_DeepPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforcement_learning/_train_RL_DeepPath.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reinforcement_learning/_train_RL_autoDeepPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforcement_learning/_train_RL_autoDeepPath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/ppo_ReasoningDeepPathEnv_TransE/PPO2_MlpPolicy_1/events.out.tfevents.1588255595.HAL9000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/ppo_ReasoningDeepPathEnv_autoTransE/PPO2_MlpPolicy_1/events.out.tfevents.1588230331.HAL9000" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,7 @@
       <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python._train_RL_DeepPath">
+  <component name="RunManager" selected="Python._train_RL_autoDeepPath">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -325,33 +327,33 @@
     </state>
     <state x="739" y="317" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587396960064" />
     <state x="739" y="354" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1581072078552" />
-    <state width="1527" height="577" key="GridCell.Tab.0.bottom" timestamp="1588255653950">
+    <state width="1898" height="335" key="GridCell.Tab.0.bottom" timestamp="1588417998664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1898" height="411" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587480443195" />
     <state width="1899" height="629" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
-    <state width="1898" height="509" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587421638853" />
+    <state width="1898" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588417998664" />
     <state width="1527" height="577" key="GridCell.Tab.0.bottom/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588255653950" />
-    <state width="1527" height="577" key="GridCell.Tab.0.center" timestamp="1588255653950">
+    <state width="1898" height="335" key="GridCell.Tab.0.center" timestamp="1588417998664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1898" height="411" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587480443195" />
     <state width="1899" height="629" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
-    <state width="1898" height="509" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587421638853" />
+    <state width="1898" height="335" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588417998664" />
     <state width="1527" height="577" key="GridCell.Tab.0.center/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588255653950" />
-    <state width="1527" height="577" key="GridCell.Tab.0.left" timestamp="1588255653949">
+    <state width="1898" height="335" key="GridCell.Tab.0.left" timestamp="1588417998664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1898" height="411" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587480443195" />
     <state width="1899" height="629" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
-    <state width="1898" height="509" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587421638852" />
+    <state width="1898" height="335" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588417998664" />
     <state width="1527" height="577" key="GridCell.Tab.0.left/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588255653949" />
-    <state width="1527" height="577" key="GridCell.Tab.0.right" timestamp="1588255653950">
+    <state width="1898" height="335" key="GridCell.Tab.0.right" timestamp="1588417998664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1898" height="411" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587480443195" />
     <state width="1899" height="629" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
-    <state width="1898" height="509" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587421638853" />
+    <state width="1898" height="335" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588417998664" />
     <state width="1527" height="577" key="GridCell.Tab.0.right/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588255653950" />
     <state width="1898" height="333" key="GridCell.Tab.1.bottom" timestamp="1587395927176">
       <screen x="0" y="0" width="1920" height="1040" />
