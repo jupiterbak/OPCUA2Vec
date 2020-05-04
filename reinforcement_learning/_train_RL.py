@@ -20,7 +20,7 @@ env = ReasoningEnv( data_file_path='Opcua-all.txt', embedding_model_path='export
 # Train using PPO
 # Optional: PPO2 requires a vectorized environment to run
 # the env is now wrapped automatically when passing it to the constructor
-# env = DummyVecEnv([lambda: env])
+env = DummyVecEnv([lambda: env])
 
 model = PPO2(MlpPolicy, env, verbose=1, tensorboard_log="tmp/ppo_ReasoningEnv_TransE/", nminibatches=1)
 model.learn(total_timesteps=20000, tb_log_name='PPO2_MlpPolicy')
