@@ -23,10 +23,6 @@ restored_model = restore_model(model_name_path='export/opcua_autoTransE.pkl')
 print("########### Model Hyper-Parameters ##################")
 hyper_param_dict = restored_model.get_hyperparameter_dict()
 print(json.dumps(hyper_param_dict, indent=4))
-print("########### Model Embedding Parameters ##################")
-emb_model_params_dict = {}
-restored_model.get_embedding_model_params(emb_model_params_dict)
-print(json.dumps(emb_model_params_dict, indent=4))
 
 # Evaluate resulting Model
 print("########### Model Evaluation ##################")

@@ -3,20 +3,6 @@ import numpy as np
 from ampligraph.latent_features import HolE
 from ampligraph.utils import restore_model
 
-# ComplEx model
-model = HolE(batches_count=50,
-                epochs=200,
-                k=20,
-                eta=20,
-                optimizer='adam',
-                optimizer_params={'lr':1e-4},
-                loss='multiclass_nll',
-                regularizer='LP',
-                regularizer_params={'p':3, 'lambda':1e-5},
-                seed=555,
-                verbose=True)
-
-
 # Restore the model
 restored_model = restore_model(model_name_path='export/opcua_HolE.pkl')
 
