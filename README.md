@@ -1,2 +1,2 @@
-# OPC UA Knowledge Completion via GraphEmbedding and Reinforcement Learning
+# OPC UA Knowledge Completion via Graph Embedding and Reinforcement Learning
  
