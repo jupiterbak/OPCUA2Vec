@@ -2,22 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx_performance.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult_performance.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE_performance.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE_performance.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/_opcua_autoTransE.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-ANSI-BrowseNameMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-ANSI-BrowseNameMap.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-ANSI-all.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-ANSI-all.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-ANSI-test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-ANSI-test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-ANSI-train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-ANSI-train.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-ANSI-valid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-ANSI-valid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETONE-BrowseNameMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETONE-BrowseNameMap.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETONE-all.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETONE-all.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETONE-test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETONE-test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETONE-train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETONE-train.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETONE-valid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETONE-valid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETTWO-BrowseNameMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETTWO-BrowseNameMap.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETTWO-all.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETTWO-all.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETTWO-test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETTWO-test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETTWO-train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETTWO-train.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataOpcua-DATASETTWO-valid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-DATASETTWO-valid.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/export/opcua_autoTransE.pkl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,19 @@
       <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding" />
     </key>
   </component>
-  <component name="RunManager" selected="Python._train_RL_autoDeepPath">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python._opcua_autoTrain_All_embeeding">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,6 +92,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="_opcua_autoTrain_All_embeeding" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,27 +226,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="_visualize_TransE" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_visualize_TransE.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="_visualize_TransE_3D" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -257,19 +273,19 @@
       <item itemvalue="Python._opcua_autoTrain_TransE_embeeding" />
       <item itemvalue="Python._train_RL_autoDeepPath" />
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python._visualize_TransE" />
       <item itemvalue="Python._visualize_TransE_3D" />
       <item itemvalue="Python._train_RL_DeepPath" />
       <item itemvalue="Python._visualize_autoTransE" />
       <item itemvalue="Python._test_RL_autoDeepPath" />
+      <item itemvalue="Python._opcua_autoTrain_All_embeeding" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python._opcua_autoTrain_All_embeeding" />
         <item itemvalue="Python._test_RL_autoDeepPath" />
         <item itemvalue="Python._train_RL_DeepPath" />
         <item itemvalue="Python._visualize_autoTransE" />
         <item itemvalue="Python._visualize_TransE_3D" />
-        <item itemvalue="Python._visualize_TransE" />
       </list>
     </recent_temporary>
   </component>
@@ -291,12 +307,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

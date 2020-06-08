@@ -1,0 +1,29 @@
+{
+    "k": 200,
+    "eta": 10,
+    "epochs": 2000,
+    "batches_count": 10,
+    "seed": 0,
+    "embedding_model_params": {
+        "negative_corruption_entities": "all"
+    },
+    "optimizer": "adam",
+    "optimizer_params": {
+        "lr": 0.01
+    },
+    "loss": "self_adversarial",
+    "loss_params": {
+        "margin": 20,
+        "alpha": 0.5
+    },
+    "regularizer": "LP",
+    "regularizer_params": {
+        "p": 2,
+        "lambda": 1e-05
+    },
+    "initializer": "xavier",
+    "initializer_params": {
+        "uniform": false
+    },
+    "verbose": true
+}

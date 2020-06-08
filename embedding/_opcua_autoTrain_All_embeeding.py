@@ -16,21 +16,21 @@ from ampligraph.utils import save_model
 # Prepare the dataset
 X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
 # To split the graph in train, validation, and test the method must be called twice:
-X_train_valid, X_test = train_test_split_no_unseen(X, test_size=500)
-X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=1000)
+X_train_valid, X_test = train_test_split_no_unseen(X, test_size=1000, allow_duplication=True)
+X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=500, allow_duplication=True)
 filter_triples = np.concatenate((X_train, X_test))
 
 # Model classes
-model_classes = [HolE, ComplEx, ConvKB, DistMult, TransE]
+model_classes = [TransE, DistMult, ComplEx, HolE]
 
 # Use the template given below for doing grid search.
 param_grid = {
-    "batches_count": [10],
-    "seed": 0,
+    "batches_count": [10, 50, 100],
     "epochs": [2000],
-    "k": [50, 200],
+    "k": [50, 100, 150, 200],
+    "seed": 0,
     "eta": [5, 10],
-    "loss": ["pairwise", "nll", "self_adversarial"],
+    "loss": ["pairwise", "nll", "self_adversarial", "absolute_margin"],
     # We take care of mapping the params to corresponding classes
     "loss_params": {
         # margin corresponding to both pairwise and adverserial loss
@@ -47,9 +47,10 @@ param_grid = {
         "p": [2],
         "lambda": [1e-4, 1e-5]
     },
-    "optimizer": ["adam"],
+    "optimizer": ["adam", "sgd", "momentum", "adagrad"],
     "optimizer_params": {
-        "lr": [0.01, 0.0001]
+        "lr": [0.01, 0.0001],
+        "momentum": [0.8, 0.9, 0.95]
     },
     "verbose": True
 }
@@ -68,13 +69,20 @@ for model_class in model_classes:
                                   # Parameter grid
                                   param_grid,
                                   # Maximum Combination
-                                  # max_combinations=150,
+                                  max_combinations=100,
                                   # Use filtered set for eval
                                   use_filter=True,
                                   # corrupt subject and objects separately during eval
                                   use_default_protocol=True,
+                                  # Flag to indicate whether best model should be re-trained at the end.
+                                  retrain_best_model= True,
                                   # Log all the model hyperparams and evaluation stats
-                                  verbose=True)
+                                  verbose=True,
+                                  # Early stopping
+                                  early_stopping=True,
+                                  # Early stopping parameters
+                                  early_stopping_params={'criteria': 'mrr', 'burn_in': 1000, 'check_interval': 100}
+    )
     print(type(best_model).__name__, best_params, best_mrr_train, mrr_test)
     save_model(best_model, model_name_path='export/opcua_auto' + best_model.name + '.pkl')
     # Print out the hyper-parameters
