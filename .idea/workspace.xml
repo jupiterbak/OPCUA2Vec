@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx_performance.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult_performance.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE_performance.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE_performance.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/_opcua_autoTransE.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/export/opcua_autoTransE.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,19 +48,7 @@
       <recent name="C:\GitHub\OPCUA-Konowledge-Graph-ReasonningV2\embedding" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python._opcua_autoTrain_All_embeeding">
+  <component name="RunManager" selected="Python._opcua_autoTrain_All_embeeding_2">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,6 +83,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="_opcua_autoTrain_All_embeeding_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -226,27 +217,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="_visualize_TransE_3D" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_visualize_TransE_3D.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="_visualize_autoTransE" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -273,19 +243,19 @@
       <item itemvalue="Python._opcua_autoTrain_TransE_embeeding" />
       <item itemvalue="Python._train_RL_autoDeepPath" />
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python._visualize_TransE_3D" />
       <item itemvalue="Python._train_RL_DeepPath" />
       <item itemvalue="Python._visualize_autoTransE" />
       <item itemvalue="Python._test_RL_autoDeepPath" />
       <item itemvalue="Python._opcua_autoTrain_All_embeeding" />
+      <item itemvalue="Python._opcua_autoTrain_All_embeeding_2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python._opcua_autoTrain_All_embeeding_2" />
         <item itemvalue="Python._opcua_autoTrain_All_embeeding" />
         <item itemvalue="Python._test_RL_autoDeepPath" />
         <item itemvalue="Python._train_RL_DeepPath" />
         <item itemvalue="Python._visualize_autoTransE" />
-        <item itemvalue="Python._visualize_TransE_3D" />
       </list>
     </recent_temporary>
   </component>
@@ -307,22 +277,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="405" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588455581285">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2325" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591631051376">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="405" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587396974399" />
+    <state x="2325" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591631051376" />
     <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583318663273" />
     <state x="405" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588455581285" />
     <state x="405" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588229193741" />
@@ -330,15 +300,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="729" y="382" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583324266933" />
-    <state x="788" y="422" key="#com.intellij.ide.actions.DebugLogConfigureAction" timestamp="1582910818592">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="788" y="422" key="#com.intellij.ide.actions.DebugLogConfigureAction/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582910818592" />
     <state x="640" y="282" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591465331352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="282" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587477055912" />
-    <state x="640" y="315" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582877981231" />
     <state x="640" y="282" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591465331352" />
     <state width="1461" height="418" key="DebuggerActiveHint" timestamp="1588456103486">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -349,31 +314,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="317" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587396960064" />
-    <state width="1898" height="333" key="GridCell.Tab.0.bottom" timestamp="1588462730244">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1898" height="428" key="GridCell.Tab.0.bottom" timestamp="1591631201424">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1898" height="411" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587480443195" />
+    <state width="1898" height="428" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591631201424" />
     <state width="1899" height="629" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
     <state width="1898" height="333" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588462730244" />
     <state width="1527" height="577" key="GridCell.Tab.0.bottom/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588255653950" />
-    <state width="1898" height="333" key="GridCell.Tab.0.center" timestamp="1588462730243">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1898" height="428" key="GridCell.Tab.0.center" timestamp="1591631201423">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1898" height="411" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587480443195" />
+    <state width="1898" height="428" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591631201423" />
     <state width="1899" height="629" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
     <state width="1898" height="333" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588462730243" />
     <state width="1527" height="577" key="GridCell.Tab.0.center/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588255653950" />
-    <state width="1898" height="333" key="GridCell.Tab.0.left" timestamp="1588462730243">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1898" height="428" key="GridCell.Tab.0.left" timestamp="1591631201423">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1898" height="411" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587480443195" />
+    <state width="1898" height="428" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591631201423" />
     <state width="1899" height="629" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
     <state width="1898" height="333" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588462730243" />
     <state width="1527" height="577" key="GridCell.Tab.0.left/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588255653949" />
-    <state width="1898" height="333" key="GridCell.Tab.0.right" timestamp="1588462730243">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1898" height="428" key="GridCell.Tab.0.right" timestamp="1591631201423">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1898" height="411" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587480443195" />
+    <state width="1898" height="428" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591631201423" />
     <state width="1899" height="629" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583333752424" />
     <state width="1898" height="333" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588462730243" />
     <state width="1527" height="577" key="GridCell.Tab.0.right/1920.-228.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1588255653950" />
@@ -401,10 +370,6 @@
     <state width="1898" height="333" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587395927176" />
     <state width="1899" height="418" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1583325097062" />
     <state width="1898" height="333" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588462730244" />
-    <state x="590" y="432" width="728" height="443" key="Performance.Activity.Monitor" timestamp="1582910987996">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="590" y="432" width="728" height="443" key="Performance.Activity.Monitor/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582910987996" />
     <state x="535" y="197" key="SettingsEditor" timestamp="1588228340542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -416,12 +381,7 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="342" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587477049762" />
-    <state x="655" y="403" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582910422293" />
     <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587408638711" />
-    <state x="657" y="185" width="736" height="789" key="find.popup" timestamp="1582911490096">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="657" y="185" width="736" height="789" key="find.popup/-1920.0.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1582911490096" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

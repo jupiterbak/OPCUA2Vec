@@ -14,20 +14,21 @@ from ampligraph.latent_features.models import ConvKB, DistMult, HolE
 from ampligraph.utils import save_model
 
 # Prepare the dataset
-X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
+X = load_from_csv('data', 'dataOpcua-DATASETONE-all.txt', sep='\t')
 # To split the graph in train, validation, and test the method must be called twice:
-X_train_valid, X_test = train_test_split_no_unseen(X, test_size=500)
-X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=1000)
+X_train_valid, X_test = train_test_split_no_unseen(X, test_size=1000, allow_duplication=True)
+X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=1000, allow_duplication=True)
 filter_triples = np.concatenate((X_train, X_test))
 
 # Model classes
-model_classes = [TransE]
+model_classes = [TransE, DistMult, ComplEx, HolE]
 
 # Use the template given below for doing grid search.
 param_grid = {
     "batches_count": [10, 50, 100],
     "epochs": [2000],
     "k": [50, 100, 150, 200],
+    "seed": 0,
     "eta": [5, 10],
     "loss": ["pairwise", "nll", "self_adversarial", "absolute_margin"],
     # We take care of mapping the params to corresponding classes
@@ -49,7 +50,7 @@ param_grid = {
     "optimizer": ["adam", "sgd", "momentum", "adagrad"],
     "optimizer_params": {
         "lr": [0.01, 0.0001],
-        "momentum": [0.9, 0.8, 0.95]
+        "momentum": [0.8, 0.9, 0.95]
     },
     "verbose": True
 }
@@ -68,22 +69,29 @@ for model_class in model_classes:
                                   # Parameter grid
                                   param_grid,
                                   # Maximum Combination
-                                  # max_combinations=150,
+                                  max_combinations=100,
                                   # Use filtered set for eval
                                   use_filter=True,
                                   # corrupt subject and objects separately during eval
                                   use_default_protocol=True,
+                                  # Flag to indicate whether best model should be re-trained at the end.
+                                  retrain_best_model= True,
                                   # Log all the model hyperparams and evaluation stats
-                                  verbose=True)
+                                  verbose=True,
+                                  # Early stopping
+                                  early_stopping=True,
+                                  # Early stopping parameters
+                                  early_stopping_params={'criteria': 'mrr', 'burn_in': 1000, 'check_interval': 100}
+    )
     print(type(best_model).__name__, best_params, best_mrr_train, mrr_test)
-    save_model(best_model, model_name_path='export/opcua_auto' + best_model.name + '.pkl')
+    save_model(best_model, model_name_path='export/DATASETONE/opcua_auto' + best_model.name + '.pkl')
     # Print out the hyper-parameters
     print("########### Model Hyper-Parameters ##################")
     print("##" + best_model.name)
     print("#####################################################")
     hyper_param_dict = best_model.get_hyperparameter_dict()
     print(json.dumps(hyper_param_dict, indent=4))
-    with open('export/opcua_auto' + best_model.name + '.json', 'w') as outfile:
+    with open('export/DATASETONE/opcua_auto' + best_model.name + '.json', 'w') as outfile:
         json.dump(hyper_param_dict, outfile, indent=4)
 
     # Evaluate resulting Model
@@ -106,7 +114,7 @@ for model_class in model_classes:
     hits_1 = hits_at_n_score(ranks, n=1)
     print("Hits@1: %.2f" % (hits_1))
 
-    with open('export/opcua_auto' + best_model.name + '_performance.txt', 'w') as f:
+    with open('export/DATASETONE/opcua_auto' + best_model.name + '_performance.txt', 'w') as f:
         print("MRR: %.2f" % (mrr), file=f)
         print("MR: %.2f" % (mr), file=f)
         print("Hits@10: %.2f" % (hits_10), file=f)
