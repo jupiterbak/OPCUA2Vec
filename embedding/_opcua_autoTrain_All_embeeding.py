@@ -16,8 +16,8 @@ from ampligraph.utils import save_model
 # Prepare the dataset
 X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
 # To split the graph in train, validation, and test the method must be called twice:
-X_train_valid, X_test = train_test_split_no_unseen(X, test_size=1000, allow_duplication=True)
-X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=500, allow_duplication=True)
+X_train_valid, X_test = train_test_split_no_unseen(X, test_size=1000, allow_duplication=False)
+X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=500, allow_duplication=False)
 filter_triples = np.concatenate((X_train, X_test))
 
 # Model classes

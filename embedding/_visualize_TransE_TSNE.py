@@ -43,8 +43,8 @@ plot_df = pd.DataFrame({"uniques": uniques,
 fig = px.scatter(plot_df,
                  x="embedding1",
                  y="embedding2",
-                 hover_data=['uniques'],
-                 color="clusters"
+                 hover_data=['uniques']
+
                  )
 fig.update_layout(
     title="TransE_TSNE",

@@ -2440,7 +2440,7 @@ ns=4;i=20085	Variable085
 ns=4;i=20086	Variable086
 ns=0;i=17502	EngineeringUnits
 ns=4;i=20080	Variable080
-ns=4;i=5020	Voyez_le_brick_géant_que_j’examine_près_du_wharf
+ns=4;i=5020	Voyez_le_brick_gÃ©ant_que_jâ€™examine_prÃ¨s_du_wharf
 ns=4;i=20078	Variable078
 ns=4;i=20079	Variable079
 ns=4;i=20072	Variable072
@@ -2456,7 +2456,7 @@ ns=4;i=20075	Variable075
 ns=0;i=17513	ProfileUri
 ns=4;i=5019	The_quick_brown_fox_jumps_over_the_lazy_dog
 ns=4;i=5018	Franz_jagt_im_komplett_verwahrlosten_Taxi_quer_durch_Bayern
-ns=4;i=5017	Die_heiße_Zypernsonne_quälte_Max_und_Victoria_ja_böse_auf_dem_Weg_bis_zur_Küste
+ns=4;i=5017	Die_heiÃŸe_Zypernsonne_quÃ¤lte_Max_und_Victoria_ja_bÃ¶se_auf_dem_Weg_bis_zur_KÃ¼ste
 ns=4;i=5016	?????_???_????_??????_???????????_?????,_??_?????_???
 ns=4;i=5013	Default Binary
 ns=4;i=5011	Default Binary

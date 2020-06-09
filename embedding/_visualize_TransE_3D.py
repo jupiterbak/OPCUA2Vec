@@ -13,18 +13,21 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
-
 # Train test split
 X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
 
 # Restore the model
-restored_model = restore_model(model_name_path='export/opcua_TransE.pkl')
+restored_model = restore_model(model_name_path='export/opcua_autoTransE.pkl')
 
 # Get the teams entities and their corresponding embeddings
 triples_df = pd.DataFrame(X, columns=['s', 'p', 'o'])
 uniques = triples_df.s.unique()
 uniques_embeddings = dict(zip(uniques, restored_model.get_embeddings(uniques)))
 uniques_embeddings_array = np.array([i for i in uniques_embeddings.values()])
+
+# get the labels
+labels = load_from_csv('data', 'dataOpcua-ANSI-BrowseNameMap.txt', sep='\t')
+labels_df =  pd.DataFrame(labels, columns=['nid', 'label'])
 
 # Find clusters of embeddings using KMeans
 kmeans = KMeans(n_clusters=6, n_init=100, max_iter=500)

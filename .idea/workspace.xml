@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcac6f3-defd-4adb-be1f-fb2123d6afa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoComplEx_performance.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoDistMult_performance.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoHolE_performance.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/Unified_Automation/opcua_autoTransE_performance.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export/_opcua_autoTransE.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export/opcua_autoTransE.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataOpcua-ANSI-BrowseNameMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataOpcua-ANSI-BrowseNameMap.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_opcua_autoTrain_All_embeeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/embedding/_visualize_TransE_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_TransE_3D.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/export/opcua_autoTransE.pkl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python._opcua_autoTrain_All_embeeding">
+  <component name="RunManager" selected="Python._visualize_TransE_3D">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -226,7 +213,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="_visualize_TransE_3D" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="_visualize_TransE_3D" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -247,7 +234,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="_visualize_autoTransE" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="_visualize_TransE_TSNE" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OPCUA-Konowledge-Graph-ReasonningV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -259,7 +246,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_visualize_autoTransE.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/_visualize_TransE_TSNE.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,19 +260,19 @@
       <item itemvalue="Python._opcua_autoTrain_TransE_embeeding" />
       <item itemvalue="Python._train_RL_autoDeepPath" />
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python._visualize_TransE_3D" />
       <item itemvalue="Python._train_RL_DeepPath" />
-      <item itemvalue="Python._visualize_autoTransE" />
       <item itemvalue="Python._test_RL_autoDeepPath" />
       <item itemvalue="Python._opcua_autoTrain_All_embeeding" />
+      <item itemvalue="Python._visualize_TransE_TSNE" />
+      <item itemvalue="Python._visualize_TransE_3D" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python._visualize_TransE_3D" />
+        <item itemvalue="Python._visualize_TransE_TSNE" />
         <item itemvalue="Python._opcua_autoTrain_All_embeeding" />
         <item itemvalue="Python._test_RL_autoDeepPath" />
         <item itemvalue="Python._train_RL_DeepPath" />
-        <item itemvalue="Python._visualize_autoTransE" />
-        <item itemvalue="Python._visualize_TransE_3D" />
       </list>
     </recent_temporary>
   </component>
@@ -469,6 +456,11 @@
           <url>file://$PROJECT_DIR$/embedding/_visualize_autoTransE.py</url>
           <line>28</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/embedding/_visualize_TransE_3D.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
