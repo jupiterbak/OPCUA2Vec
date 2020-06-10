@@ -1,0 +1,4 @@
+Data set name: Unified_Automation
+Unique triples: 31890.00
+Unique relations: 19.00
+Unique entities: 4743.00
