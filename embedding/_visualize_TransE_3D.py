@@ -27,8 +27,8 @@ uniques_embeddings_array = np.array([i for i in uniques_embeddings.values()])
 
 # get the labels
 labels = load_from_csv('data', 'dataOpcua-ANSI-BrowseNameMap.txt', sep='\t')
-labels_df =  pd.DataFrame(labels, columns=['nid', 'label'])
-
+labels_df = {labels[i][0]: labels[i][1] for i in range(len(labels))}
+unique_labels = [labels_df.get(e, None) for e in uniques]
 # Find clusters of embeddings using KMeans
 kmeans = KMeans(n_clusters=6, n_init=100, max_iter=500)
 clusters = find_clusters(uniques, restored_model, kmeans, mode='entity')
@@ -40,7 +40,8 @@ plot_df = pd.DataFrame({"uniques": uniques,
                         "clusters": pd.Series(clusters).astype(str),
                         "embedding1": embeddings_3d[:, 0],
                         "embedding2": embeddings_3d[:, 1],
-                        "embedding3": embeddings_3d[:, 2]})
+                        "embedding3": embeddings_3d[:, 2],
+                        "label": unique_labels})
 
 np.random.seed(555)
 
@@ -48,7 +49,7 @@ fig = px.scatter_3d(plot_df,
                     x="embedding1",
                     y="embedding2",
                     z="embedding3",
-                    hover_data=['uniques'],
+                    hover_data=['uniques', 'label'],
                     color="clusters",
                     size_max=1
                     )
