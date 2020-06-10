@@ -5,7 +5,7 @@ from ampligraph.datasets import load_from_csv
 from ampligraph.evaluation import evaluate_performance, select_best_model_ranking
 from ampligraph.evaluation import mr_score, mrr_score, hits_at_n_score
 from ampligraph.evaluation import train_test_split_no_unseen
-from ampligraph.latent_features.models import ConvKB
+from ampligraph.latent_features.models import ConvE
 from ampligraph.utils import save_model
 from numpyencoder import NumpyEncoder
 
@@ -20,7 +20,7 @@ X_train_valid, X_test = train_test_split_no_unseen(X, test_size=1000, seed=0, al
 X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=1000, seed=0, allow_duplication=True)
 
 # model selection
-model_class = ConvKB
+model_class = ConvE
 
 # Use the template given below for doing grid search.
 param_grid = {
@@ -41,13 +41,9 @@ param_grid = {
         "lr": [0.01],
         "momentum": [0.8],
     },
-    "loss": ["pairwise", "self_adversarial"],
+    "loss": ["bce"],
     # We take care of mapping the params to corresponding classes
     "loss_params": {
-        # margin corresponding to both pairwise and adverserial loss
-        "margin": [20],
-        # alpha corresponding to adverserial loss
-        "alpha": [0.5],
         # Learning rate for loss computation
         "lr": [0.01],
         # applies label smoothing to one-hot outputs.
