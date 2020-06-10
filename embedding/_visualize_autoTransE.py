@@ -20,7 +20,7 @@ X = load_from_csv('data', 'dataOpcua-DATASETONE-all.txt', sep='\t')
 X_train, X_test = train_test_split_no_unseen(X, test_size=1000, seed=0)
 
 # Restore the model
-restored_model = restore_model(model_name_path='export\DATASETONE\opcua_autoDistMult.pkl')
+restored_model = restore_model(model_name_path='export\DATASETONE\opcua_autoHolE.pkl')
 print("########### Model Hyper-Parameters ##################")
 hyper_param_dict = restored_model.get_hyperparameter_dict()
 print(json.dumps(hyper_param_dict, indent=4, cls=NumpyEncoder))
