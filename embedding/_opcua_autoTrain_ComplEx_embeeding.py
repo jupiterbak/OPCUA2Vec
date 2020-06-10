@@ -1,53 +1,55 @@
-from pprint import pprint
+import json
 
 import numpy as np
-import pandas as pd
-import requests
-
 from ampligraph.datasets import load_from_csv
-from ampligraph.latent_features import ComplEx, TransE
 from ampligraph.evaluation import evaluate_performance, select_best_model_ranking
 from ampligraph.evaluation import mr_score, mrr_score, hits_at_n_score
 from ampligraph.evaluation import train_test_split_no_unseen
-from ampligraph.latent_features.models import ConvKB
+from ampligraph.latent_features.models import ComplEx
 from ampligraph.utils import save_model
+from numpyencoder import NumpyEncoder
+
+DATASET_LOCATION = 'data/'
+DATASET_FILE = 'dataOpcua-DATASETONE-all.txt'
+RESULT_EXPORT_LOCATION = 'export/DATASETONE/'
 
 # Prepare the dataset
-X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
+X = load_from_csv(DATASET_LOCATION, DATASET_FILE, sep='\t')
 # To split the graph in train, validation, and test the method must be called twice:
-X_train_valid, X_test = train_test_split_no_unseen(X, test_size=500)
-X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=1000)
+X_train_valid, X_test = train_test_split_no_unseen(X, test_size=1000, seed=0, allow_duplication=True)
+X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=1000, seed=0, allow_duplication=True)
 
 # model selection
 model_class = ComplEx
 
 # Use the template given below for doing grid search.
 param_grid = {
+    "k": [50, 200],
+    "eta": [5],
+    "epochs": [2000],
     "batches_count": [10],
     "seed": 0,
-    "epochs": [2000],
-    "k": [50, 200],
-    "eta": [5, 10],
-    "loss": ["pairwise", "nll", "self_adversarial"],
-    # We take care of mapping the params to corresponding classes
-    "loss_params": {
-        # margin corresponding to both pairwise and adverserial loss
-        "margin": [0.5, 20],
-        # alpha corresponding to adverserial loss
-        "alpha": [0.5]
-    },
     "embedding_model_params": {
         # generate corruption using all entities during training
         "negative_corruption_entities": "all"
     },
-    "regularizer": [None, "LP"],
+    "optimizer": ["adam", "adagrad"],
+    "optimizer_params": {
+        "lr": [0.01],
+        "momentum": [0.8],
+    },
+    "loss": ["pairwise", "self_adversarial"],
+    # We take care of mapping the params to corresponding classes
+    "loss_params": {
+        # margin corresponding to both pairwise and adverserial loss
+        "margin": [20],
+        # alpha corresponding to adverserial loss
+        "alpha": [0.5]
+    },
+    "regularizer": ["LP"],
     "regularizer_params": {
         "p": [2],
-        "lambda": [1e-4, 1e-5]
-    },
-    "optimizer": ["adam"],
-    "optimizer_params": {
-        "lr": [0.01, 0.0001]
+        "lambda": [1e-5]
     },
     "verbose": True
 }
@@ -66,18 +68,36 @@ best_model, best_params, best_mrr_train, ranks_test, mrr_test, experimental_hist
                               param_grid,
                               # Maximum Combination
                               # max_combinations=150,
+                              # Early stopping
+                              early_stopping=True,
+                              # Early stopping parameters
+                              early_stopping_params={
+                                  'x_valid': X_valid,
+                                  'criteria': 'mrr',
+                                  'burn_in': 300,
+                                  'check_interval': 100
+                              },
                               # Use filtered set for eval
                               use_filter=True,
                               # corrupt subject and objects separately during eval
                               use_default_protocol=True,
                               # Log all the model hyperparams and evaluation stats
                               verbose=True)
+
 print(type(best_model).__name__, best_params, best_mrr_train, mrr_test)
-save_model(best_model, model_name_path='export/opcua_autoComplEx.pkl')
+save_model(best_model, model_name_path=RESULT_EXPORT_LOCATION + 'opcua_auto' + best_model.name + '.pkl')
+# Print out the hyper-parameters
+print("########### Model Hyper-Parameters ##################")
+print("##" + best_model.name)
+print("#####################################################")
+hyper_param_dict = best_model.get_hyperparameter_dict()
+print(json.dumps(hyper_param_dict, indent=4, cls=NumpyEncoder))
+with open(RESULT_EXPORT_LOCATION + 'opcua_auto' + best_model.name + '.json', 'w') as outfile:
+    json.dump(hyper_param_dict, outfile, indent=4, cls=NumpyEncoder)
 
 # Evaluate resulting Model
 filter_triples = np.concatenate((X_train, X_test))
-ranks = evaluate_performance(X_test,
+ranks = evaluate_performance(X,
                              model=best_model,
                              filter_triples=filter_triples,
                              use_default_protocol=True,
@@ -96,7 +116,12 @@ print("Hits@3: %.2f" % (hits_3))
 hits_1 = hits_at_n_score(ranks, n=1)
 print("Hits@1: %.2f" % (hits_1))
 
-y_pred_after = best_model.predict(np.array([['ns=0;i=16572', 'ns=0;i=40', 'ns=0;i=68']]))
-print(y_pred_after)
+# Output the results into File
+with open(RESULT_EXPORT_LOCATION + 'opcua_auto' + best_model.name + '_performance.txt', 'w') as f:
+    print("MRR: %.2f" % (mrr), file=f)
+    print("MR: %.2f" % (mr), file=f)
+    print("Hits@10: %.2f" % (hits_10), file=f)
+    print("Hits@3: %.2f" % (hits_3), file=f)
+    print("Hits@1: %.2f" % (hits_1), file=f)
 
-embs = best_model.get_embeddings(['ns=0;i=16572'], embedding_type='entity')
+print("#####################################################")

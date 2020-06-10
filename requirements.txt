@@ -8,3 +8,4 @@ mpld3
 plotly
 gym
 stable-baselines
+numpyencoder

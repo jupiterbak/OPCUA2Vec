@@ -9,27 +9,53 @@ from ampligraph.evaluation import mr_score, mrr_score, hits_at_n_score
 from ampligraph.evaluation import train_test_split_no_unseen
 from ampligraph.utils import save_model
 
-X = load_from_csv('data', 'Opcua-all.txt', sep='\t')
-
-# Train test split
-X_train, X_test = train_test_split_no_unseen(X, test_size=1000)
+# Prepare the dataset
+X = load_from_csv('data', 'dataOpcua-DATASETONE-all.txt', sep='\t')
+# To split the graph in train, validation, and test the method must be called twice:
+X_train_valid, X_test = train_test_split_no_unseen(X, test_size=1000, allow_duplication=True)
+X_train, X_valid = train_test_split_no_unseen(X_train_valid, test_size=1000, allow_duplication=True)
+filter_triples = np.concatenate((X_train, X_test))
 
 # ComplEx model
-model = DistMult(batches_count=50,
-                epochs=300,
-                k=200,
-                eta=20,
-                optimizer='adam',
-                optimizer_params={'lr':1e-4},
-                loss='multiclass_nll',
-                regularizer='LP',
-                regularizer_params={'p':3, 'lambda':1e-5},
-                seed=0,
-                verbose=True)
+model = DistMult(batches_count=10,
+                 epochs=2000,
+                 k=200,
+                 seed=0,
+                 eta=5,
+                 embedding_model_params={
+                        # generate corruption using all entities during training
+                        "negative_corruption_entities": "all"
+                 },
+                 optimizer='adam',
+                 optimizer_params={
+                     'lr': 1e-2,
+                     "momentum": 0.8,
+                 },
+                 loss="self_adversarial",
+                 loss_params={
+                        # margin corresponding to both pairwise and adverserial loss
+                        "margin": 20,
+                        # alpha corresponding to adverserial loss
+                        "alpha": 0.5
+                 },
+                 regularizer='LP',
+                 regularizer_params={
+                     'p': 2,
+                     'lambda': 1e-5
+                 },
+                 verbose=True)
 
-model.fit(X_train)
+model.fit(X_train,
+          # Early stopping
+          early_stopping=True,
+          # Early stopping parameters
+          early_stopping_params={
+              'x_valid': X_valid,
+              'criteria': 'mrr',
+              'burn_in': 300,
+              'check_interval': 100
+          })
 
-filter_triples = np.concatenate((X_train, X_test))
 ranks = evaluate_performance(X_test,
                              model=model,
                              filter_triples=filter_triples,
@@ -49,9 +75,4 @@ print("Hits@3: %.2f" % (hits_3))
 hits_1 = hits_at_n_score(ranks, n=1)
 print("Hits@1: %.2f" % (hits_1))
 
-save_model(model, model_name_path ='export/opcua_DistMult.pkl')
-
-y_pred_after = model.predict(np.array([['ns=0;i=16572',	'ns=0;i=40', 'ns=0;i=68']]))
-print(y_pred_after)
-
-embs = model.get_embeddings(['ns=0;i=16572'], embedding_type='entity')
+save_model(model, model_name_path ='export/DATASETONE/opcua_DistMult.pkl')

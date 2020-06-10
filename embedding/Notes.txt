@@ -1,0 +1,10 @@
+DistMult:
+    Adam/self_adversarial/lr=1e-2
+    adagrad/pairwise/lr=1e-2
+    Batch only small 10
+
+TransE:
+    k=100, 50
+    Adam/self_adversarial/lr=1e-2
+    adagrad/pairwise/lr=1e-2
+    Batch only small 10
