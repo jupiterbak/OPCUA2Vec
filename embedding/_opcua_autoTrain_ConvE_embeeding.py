@@ -28,7 +28,7 @@ param_grid = {
     "eta": [5],
     "epochs": [2000],
     "batches_count": [10],
-    "seed": 0,
+    "seed": [0],
     "embedding_model_params": {
         # generate corruption using all entities during training
         "negative_corruption_entities": "all",
@@ -36,7 +36,7 @@ param_grid = {
         'filter_sizes': [1],
         'dropout': [0.1]
     },
-    "optimizer": ["adam", "adagrad"],
+    "optimizer": ["sgd", "adagrad"],
     "optimizer_params": {
         "lr": [0.01],
         "momentum": [0.8],
@@ -49,7 +49,8 @@ param_grid = {
         # applies label smoothing to one-hot outputs.
         "label_smoothing": [0.1],
         # applies label smoothing to one-hot outputs.
-        "label_weighting": [True]
+        "label_weighting": [True],
+        "momentum": [0.8]
     },
     "regularizer": ["LP"],
     "regularizer_params": {
@@ -81,7 +82,7 @@ best_model, best_params, best_mrr_train, ranks_test, mrr_test, experimental_hist
                                   'criteria': 'mrr',
                                   'burn_in': 300,
                                   'check_interval': 100,
-                                  'corrupt_side': 'o'
+                                  'corrupt_side': 's, o'
                               },
                               # Use filtered set for eval
                               use_filter=True,
