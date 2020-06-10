@@ -36,10 +36,10 @@ param_grid = {
         'filter_sizes': [1],
         'dropout': [0.1]
     },
-    "optimizer": ["momentum", "adam", "adagrad"],
+    "optimizer": ["adam", "adagrad"],
     "optimizer_params": {
         "lr": [0.01],
-        "momentum": [0.8],
+        "momentum": [0.9],
     },
     "loss": ["pairwise", "self_adversarial"],
     # We take care of mapping the params to corresponding classes
@@ -53,7 +53,8 @@ param_grid = {
         # applies label smoothing to one-hot outputs.
         "label_smoothing": [0.1],
         # applies label smoothing to one-hot outputs.
-        "label_weighting": [True]
+        "label_weighting": [True],
+        "momentum": [0.8]
     },
     "regularizer": ["LP"],
     "regularizer_params": {

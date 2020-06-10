@@ -36,7 +36,7 @@ param_grid = {
         'filter_sizes': [1],
         'dropout': [0.1]
     },
-    "optimizer": ["sgd", "adagrad"],
+    "optimizer": ["adam"],
     "optimizer_params": {
         "lr": [0.01],
         "momentum": [0.8],
