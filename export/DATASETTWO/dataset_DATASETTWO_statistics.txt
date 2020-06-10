@@ -1,0 +1,4 @@
+Data set name: DATASETTWO
+Unique triples: 40779.00
+Unique relations: 47.00
+Unique entities: 5724.00
