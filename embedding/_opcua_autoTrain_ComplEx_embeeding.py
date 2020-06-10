@@ -10,8 +10,8 @@ from ampligraph.utils import save_model
 from numpyencoder import NumpyEncoder
 
 DATASET_LOCATION = 'data/'
-DATASET_FILE = 'dataOpcua-DATASETONE-all.txt'
-RESULT_EXPORT_LOCATION = 'export/DATASETONE/'
+DATASET_FILE = 'dataOpcua-DATASETTWO-all.txt'
+RESULT_EXPORT_LOCATION = 'export/DATASETTWO/'
 
 # Prepare the dataset
 X = load_from_csv(DATASET_LOCATION, DATASET_FILE, sep='\t')
