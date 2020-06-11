@@ -9,10 +9,11 @@ from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 
 DATASET_LOCATION = 'data/'
-DATASET_FILE = 'dataOpcua-OPCUA-all.txt'
-DATASET_BROWSE_NAME_FILE = 'dataOpcua-OPCUA-BrowseNameMap.txt'
-RESULT_EXPORT_LOCATION = 'export/OPCUA/'
-MODEL_FILE = 'opcua_autoTransE.pkl'
+DATASET_FILE = 'dataOpcua-DATASETONE-all.txt'
+DATASET_BROWSE_NAME_FILE = 'dataOpcua-DATASETONE-BrowseNameMap.txt'
+DATASET_BROWSE_NAME_COLOR_FILE = 'dataOpcua-DATASETONE-BrowseNameMap_color.txt'
+RESULT_EXPORT_LOCATION = 'export/DATASETONE/'
+MODEL_FILE = 'opcua_autoConvKB.pkl'
 TOP_NODES = [
     "ns=0;i=84",
     "ns=0;i=85",
@@ -41,10 +42,10 @@ uniques_embeddings = dict(zip(uniques, restored_model.get_embeddings(uniques)))
 uniques_embeddings_array = np.array([i for i in uniques_embeddings.values()])
 
 # get the labels
-labels = load_from_csv(DATASET_LOCATION, DATASET_BROWSE_NAME_FILE, sep='\t')
+labels = load_from_csv(DATASET_LOCATION, DATASET_BROWSE_NAME_COLOR_FILE, sep='\t')
 labels_df = {labels[i][0]: labels[i][1] for i in range(len(labels))}
 colors_df = {labels[i][0]: labels[i][2] for i in range(len(labels))}
-unique_labels = [labels_df.get(e, None) for e in uniques]
+unique_labels = [labels_df.get(e, "None") for e in uniques]
 unique_colors = [colors_df.get(e, "None") for e in uniques]
 
 # Find clusters of embeddings using KMeans
@@ -52,7 +53,7 @@ kmeans = KMeans(n_clusters=4, n_init=100, max_iter=500)
 clusters = find_clusters(uniques, restored_model, kmeans, mode='entity')
 
 # Project embeddings into 2D space via PCA
-embeddings_2d = TSNE(n_components=2, perplexity=50).fit_transform(uniques_embeddings_array)
+embeddings_2d = TSNE(n_components=2).fit_transform(uniques_embeddings_array) # opcua_autoTransE.pkl
 # PCA(n_components=2).fit_transform(uniques_embeddings_array)
 
 # get the annotation
@@ -77,7 +78,7 @@ fig = px.scatter(plot_df,
                  # color='clusters'
                  )
 fig.update_layout(
-    title="TransE_TSNE",
+    title="TSNE of " + MODEL_FILE + " on " + DATASET_FILE,
     annotations=annotations
 )
 fig.show()

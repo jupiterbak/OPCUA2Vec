@@ -1,24 +1,20 @@
 {
     "k": 50,
     "eta": 5,
-    "epochs": 2000,
+    "epochs": 3000,
     "batches_count": 10,
     "seed": 0,
     "embedding_model_params": {
-        "num_filters": 32,
-        "filter_sizes": [
-            1
-        ],
-        "dropout": 0.1,
-        "dense_dim": 1600
+        "negative_corruption_entities": "all"
     },
-    "optimizer": "adagrad",
+    "optimizer": "adam",
     "optimizer_params": {
         "lr": 0.01
     },
-    "loss": "pairwise",
+    "loss": "self_adversarial",
     "loss_params": {
-        "margin": 20
+        "margin": 20,
+        "alpha": 0.5
     },
     "regularizer": "LP",
     "regularizer_params": {
