@@ -1,0 +1,4 @@
+Data set name: OPCUA
+Unique triples: 29589.00
+Unique relations: 23.00
+Unique entities: 4270.00

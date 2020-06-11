@@ -14,10 +14,10 @@ import plotly.graph_objects as go
 import plotly.express as px
 import plotly.io as pio
 
-DATASET_NAME = 'DATASETTWO'
+DATASET_NAME = 'ANSI'
 DATASET_LOCATION = 'data/'
-DATASET_FILE = 'dataOpcua-DATASETTWO-all.txt'
-RESULT_EXPORT_LOCATION = 'export/DATASETTWO/'
+DATASET_FILE = 'dataOpcua-ANSI-all.txt'
+RESULT_EXPORT_LOCATION = 'export/ANSI/'
 
 # Prepare the dataset
 X = load_from_csv(DATASET_LOCATION, DATASET_FILE, sep='\t')
