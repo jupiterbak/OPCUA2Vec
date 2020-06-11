@@ -9,9 +9,9 @@ from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 
 DATASET_LOCATION = 'data/'
-DATASET_FILE = 'dataOpcua-DATASETONE-all.txt'
-DATASET_BROWSE_NAME_FILE = 'dataOpcua-DATASETONE-BrowseNameMap.txt'
-RESULT_EXPORT_LOCATION = 'export/DATASETONE/'
+DATASET_FILE = 'dataOpcua-OPCUA-all.txt'
+DATASET_BROWSE_NAME_FILE = 'dataOpcua-OPCUA-BrowseNameMap.txt'
+RESULT_EXPORT_LOCATION = 'export/OPCUA/'
 MODEL_FILE = 'opcua_autoTransE.pkl'
 TOP_NODES = [
     "ns=0;i=84",
@@ -43,14 +43,16 @@ uniques_embeddings_array = np.array([i for i in uniques_embeddings.values()])
 # get the labels
 labels = load_from_csv(DATASET_LOCATION, DATASET_BROWSE_NAME_FILE, sep='\t')
 labels_df = {labels[i][0]: labels[i][1] for i in range(len(labels))}
+colors_df = {labels[i][0]: labels[i][2] for i in range(len(labels))}
 unique_labels = [labels_df.get(e, None) for e in uniques]
+unique_colors = [colors_df.get(e, "None") for e in uniques]
 
 # Find clusters of embeddings using KMeans
 kmeans = KMeans(n_clusters=4, n_init=100, max_iter=500)
 clusters = find_clusters(uniques, restored_model, kmeans, mode='entity')
 
 # Project embeddings into 2D space via PCA
-embeddings_2d = TSNE(n_components=2).fit_transform(uniques_embeddings_array)
+embeddings_2d = TSNE(n_components=2, perplexity=50).fit_transform(uniques_embeddings_array)
 # PCA(n_components=2).fit_transform(uniques_embeddings_array)
 
 # get the annotation
@@ -60,6 +62,7 @@ annotations= [dict(text=labels_df.get(uniques[i], "None"), x=embeddings_2d[i, 0]
 
 plot_df = pd.DataFrame({"uniques": uniques,
                         "clusters": pd.Series(clusters).astype(str),
+                        "colors": unique_colors,
                         "embedding1": embeddings_2d[:, 0],
                         "embedding2": embeddings_2d[:, 1],
                         "label": unique_labels})
@@ -70,6 +73,7 @@ fig = px.scatter(plot_df,
                  hover_data=['uniques', 'label'],
                  size_max=0.5,
                  template='simple_white',
+                 color='colors'
                  # color='clusters'
                  )
 fig.update_layout(

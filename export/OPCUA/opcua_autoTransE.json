@@ -1,0 +1,28 @@
+{
+    "k": 50,
+    "eta": 5,
+    "epochs": 3000,
+    "batches_count": 10,
+    "seed": 0,
+    "embedding_model_params": {
+        "negative_corruption_entities": "all"
+    },
+    "optimizer": "adagrad",
+    "optimizer_params": {
+        "lr": 0.01
+    },
+    "loss": "pairwise",
+    "loss_params": {
+        "margin": 20
+    },
+    "regularizer": "LP",
+    "regularizer_params": {
+        "p": 2,
+        "lambda": 1e-05
+    },
+    "initializer": "xavier",
+    "initializer_params": {
+        "uniform": false
+    },
+    "verbose": true
+}
