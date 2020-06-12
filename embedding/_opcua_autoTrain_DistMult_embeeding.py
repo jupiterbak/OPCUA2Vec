@@ -10,8 +10,8 @@ from ampligraph.utils import save_model
 from numpyencoder import NumpyEncoder
 
 DATASET_LOCATION = 'data/'
-DATASET_FILE = 'dataOpcua-DATASETTWO-all.txt'
-RESULT_EXPORT_LOCATION = 'export/DATASETTWO/'
+DATASET_FILE = 'dataOpcua-OPCUA-all.txt'
+RESULT_EXPORT_LOCATION = 'export/OPCUA/'
 
 # Prepare the dataset
 X = load_from_csv(DATASET_LOCATION, DATASET_FILE, sep='\t')
@@ -26,7 +26,7 @@ model_class = DistMult
 param_grid = {
     "k": [50, 200],
     "eta": [5],
-    "epochs": [2000],
+    "epochs": [3000],
     "batches_count": [10],
     "seed": 0,
     "embedding_model_params": {
