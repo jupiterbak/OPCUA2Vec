@@ -13,7 +13,7 @@ DATASET_FILE = 'dataOpcua-DATASETONE-all.txt'
 DATASET_BROWSE_NAME_FILE = 'dataOpcua-DATASETONE-BrowseNameMap.txt'
 DATASET_BROWSE_NAME_COLOR_FILE = 'dataOpcua-DATASETONE-BrowseNameMap_color.txt'
 RESULT_EXPORT_LOCATION = 'export/DATASETONE/'
-MODEL_FILE = 'opcua_autoConvKB.pkl'
+MODEL_FILE = 'opcua_autoTransE.pkl'
 TOP_NODES = [
     "ns=0;i=84",
     "ns=0;i=85",

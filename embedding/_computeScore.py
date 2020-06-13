@@ -7,9 +7,9 @@ from ampligraph.utils import restore_model
 from numpyencoder import NumpyEncoder
 
 DATASET_LOCATION = 'data/'
-DATASET_FILE = 'dataOpcua-OPCUA-all.txt'
-RESULT_EXPORT_LOCATION = 'export/OPCUA/'
-MODEL_FILE = 'opcua_autoComplEx.pkl'
+DATASET_FILE = 'dataOpcua-DATASETTWO-all.txt'
+RESULT_EXPORT_LOCATION = 'export/DATASETTWO/'
+MODEL_FILE = 'opcua_autoTransE.pkl'
 
 print("########### Load DATASET: " + DATASET_FILE + " ##################")
 X = load_from_csv(DATASET_LOCATION, DATASET_FILE, sep='\t')
