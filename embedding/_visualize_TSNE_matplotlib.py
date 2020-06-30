@@ -32,13 +32,7 @@ TOP_NODES = [
     "ns=0;i=17708",
     "ns=0;i=16304",
     "ns=0;i=14100"
-    # "ns=0;i=11192"
-    # ,
-    # "ns=0;i=58",
-    # "ns=0;i=89",
-    # "ns=0;i=3048",
-    # "ns=0;i=91",
-    # "ns=0;i=90"
+
 ]
 
 
@@ -73,7 +67,7 @@ clusters = find_clusters(uniques, restored_model, kmeans, mode='entity')
 
 # Project embeddings into 2D space via PCA
 if GENERAGE_TSNE is True:
-    embeddings_2d = TSNE(n_components=2).fit_transform(uniques_embeddings_array)  # opcua_autoTransE.pkl
+    embeddings_2d = TSNE(n_components=2, perplexity=30.0).fit_transform(uniques_embeddings_array)  # opcua_autoTransE.pkl
     # save embedding 2D
     with open(RESULT_EXPORT_LOCATION + 'TSNE_2D.npy', 'wb') as f:
         np.save(f, embeddings_2d)
@@ -119,7 +113,7 @@ color_dictionary = {
 
 for k, v in color_dictionary.items():
     plot_df_sub = plot_df[plot_df['Entity type'] == k]
-    ax.scatter(plot_df_sub['embedding1'], plot_df_sub['embedding2'], s=50, c=v, alpha=0.8, marker='o',
+    ax.scatter(plot_df_sub['embedding1'], plot_df_sub['embedding2'], s=30, c=v, alpha=0.8, marker='o',
                label=k, facecolor='0.6', lw=0.8)
     # ax = plot_df_sub.plot.scatter(x='embedding1', y='embedding2', c=v,  s=20, ax=ax) # colormap='tab10'
 
