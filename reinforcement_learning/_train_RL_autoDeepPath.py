@@ -25,7 +25,7 @@ env = None
 if NUM_ENV == 1:
     # Instantiate a single environment
     _env = ReasoningDeepPathEnv(data_file_path='Opcua-all.txt', embedding_model_path='export/opcua_autoTransE.pkl',
-                               max_step=8)
+                               max_step=4)
     env = DummyVecEnv([lambda: _env])
 else:
     # multiprocess environment
@@ -44,10 +44,10 @@ with tf.device(DEVICE):
     RL_model = PPO2(
         MlpLstmPolicy,
         env,
-        policy_kwargs={'n_lstm': 16},
+        policy_kwargs={'n_lstm': 128},
         cliprange=0.2,
         n_steps=64,
-        seed=998,
+        seed=0, # 998, 345, 2, 786, 23, 134, 34, 799, 4587, 5
         learning_rate=20e-4,
         verbose=1,
         tensorboard_log="tmp/ppo_ReasoningDeepPathEnv_autoTransE_7/",

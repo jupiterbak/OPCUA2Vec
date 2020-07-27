@@ -189,7 +189,7 @@ plt.setp(axine.get_yticklabels(), visible=False)
 mark_inset(ax, axine, loc1=1, loc2=4, fc="none", ec="0.5")
 
 ax.set_xlabel('t-SNE Feature 1')
-ax.set_ylabel('t-SNE Feature 1')
+ax.set_ylabel('t-SNE Feature 2')
 ax.grid(ls='--')
 ax.legend(framealpha=1, frameon=True, loc='best')
 
