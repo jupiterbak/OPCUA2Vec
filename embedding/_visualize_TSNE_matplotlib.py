@@ -200,6 +200,9 @@ fig.tight_layout()
 
 _save_path_pdf = os.path.normpath('{}/{}_export.pdf'.format(RESULT_EXPORT_LOCATION, MODEL_FILE))
 plt.savefig(_save_path_pdf, dpi=300)
+_save_path_png = os.path.normpath('{}/{}_export.png'.format(RESULT_EXPORT_LOCATION, MODEL_FILE))
+plt.savefig(_save_path_png, dpi=300)
+
 plt.show()
 
 # color_dictionary ={
