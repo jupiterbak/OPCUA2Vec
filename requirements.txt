@@ -1,4 +1,4 @@
-tensorflow>=1.15.4,<2.0
+tensorflow>=1.15.4,<3.0
 scikit-learn
 ampligraph
 pandas
